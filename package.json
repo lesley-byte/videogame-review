@@ -1,0 +1,46 @@
+{
+  "name": "videogame-review",
+  "version": "1.0.0",
+  "description": "This is a video game review website deployed to heroku. It is a full stack application that uses a MySQL database, Node, Express, and Handlebars. It follows the MVC design pattern; using Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lesley-byte/videogame-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lesley-byte/videogame-review/issues"
+  },
+  "homepage": "https://github.com/lesley-byte/videogame-review#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "clog": "^0.1.6",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^3.0.1",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.4.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/setup.js"
+    ]
+}
+}
