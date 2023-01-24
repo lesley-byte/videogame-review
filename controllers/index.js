@@ -1,9 +1,27 @@
 const router = require('express').Router();
 
 const apiRoutes = require('./api');
-const homeRoutes = require('./home-routes');
+const categoryRoutes = require('./categoryRoutes');
+const developerRoutes = require('./developerRoutes');
+const gameRoutes = require('./gameRoutes');
+const gameplatformRoutes = require('./gameplatformRoutes');
+const genreRoutes = require('./genreRoutes');
+const platformRoutes = require('./platformRoutes');
+const reviewRoutes = require('./reviewRoutes');
+const userblockRoutes = require('./userblockRoutes');
+const userfriendRoutes = require('./userfriendRoutes');
+const homeRoutes = require('./homeRoutes');
 
 router.use('/api', apiRoutes);
+router.use('/categories', categoryRoutes);
+router.use('/developers', developerRoutes);
+router.use('/games', gameRoutes);
+router.use('/gameplatforms', gameplatformRoutes);
+router.use('/genres', genreRoutes);
+router.use('/platforms', platformRoutes);
+router.use('/reviews', reviewRoutes);
+router.use('/userblocks', userblockRoutes);
+router.use('/userfriends', userfriendRoutes);
 router.use('/', homeRoutes);
 
 module.exports = router;
