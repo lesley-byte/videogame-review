@@ -8,8 +8,6 @@ const gameplatformRoutes = require('./gameplatformRoutes');
 const genreRoutes = require('./genreRoutes');
 const platformRoutes = require('./platformRoutes');
 const reviewRoutes = require('./reviewRoutes');
-const userblockRoutes = require('./userblockRoutes');
-const userfriendRoutes = require('./userfriendRoutes');
 const homeRoutes = require('./homeRoutes');
 
 router.use('/api', apiRoutes);
@@ -20,8 +18,6 @@ router.use('/gameplatforms', gameplatformRoutes);
 router.use('/genres', genreRoutes);
 router.use('/platforms', platformRoutes);
 router.use('/reviews', reviewRoutes);
-router.use('/userblocks', userblockRoutes);
-router.use('/userfriends', userfriendRoutes);
 router.use('/', homeRoutes);
 
 module.exports = router;

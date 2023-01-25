@@ -27,7 +27,7 @@ This is a video game review website deployed to heroku. It is a full stack appli
 
 ## Screenshot
 
-![Screenshot](./assets/images/screenshot.png)
+![Screenshot]()
 
 ## Testing
 

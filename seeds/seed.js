@@ -9,9 +9,6 @@ const seedGenre = require('./genreData');
 const seedPlatform = require('./platformData');
 const seedReview = require('./reviewData');
 const seedUser = require('./userData');
-const seedUserBlock = require('./userblockData');
-const seedUserFriend = require('./userfriendData');
-const seedUsers = require('./userData');
 // create a function to seed the database
 // use the sequelize.sync() and the bulkCreate() or create() methods to seed the database
 const seedAll = async () => {
@@ -24,9 +21,6 @@ const seedAll = async () => {
   await seedPlatform();
   await seedReview();
   await seedUser();
-  await seedUserBlock();
-  await seedUserFriend();
-  await seedUsers();
 
   // close the connection to the database
   process.exit(0);
