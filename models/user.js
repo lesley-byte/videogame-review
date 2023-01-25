@@ -36,21 +36,15 @@ User.init(
       },
     },
     // friends will be an array of user ids  TODO: figure out how to make this work🔥
-    friends: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
+    userfriend_id: {
+      type: DataTypes.STRING,
       allowNull: true,
-    },
-    // blocked_users will be an array of user ids  TODO: figure out how to make this work🔥
-    blocked_users: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      allowNull: true,
-
-    },
-    // wishlist will be an array of game ids  TODO: figure out how to make this work🔥
-    wishlist: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      allowNull: true,
-    },
+  },
+    // // blocked_users will be an array of user ids  TODO: figure out how to make this work🔥
+    // userblock_id: {
+    //   type: DataTypes.ARRAY(DataTypes.INTEGER),
+    //   allowNull: true,
+    // },
   },
   {
     hooks: {
