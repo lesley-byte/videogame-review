@@ -1,3 +1,4 @@
+//many to many relationship between the game and all the platforms it is available on
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

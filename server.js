@@ -10,6 +10,7 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//try to put secret in .env file
 const sess = {
   secret: 'Super secret secret',
   cookie: {

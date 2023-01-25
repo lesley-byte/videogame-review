@@ -1,3 +1,5 @@
+//allows you search one user or all users
+
 const router = require('express').Router();
 const { User } = require('../../models');
 

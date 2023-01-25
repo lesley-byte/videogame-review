@@ -1,3 +1,5 @@
+//This is to seed genre table
+
 const { Genre } = require('../models');
 
 const genreData = [

@@ -1,3 +1,5 @@
+//the category table
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -16,6 +18,8 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    //this is a foreign key to genre table
     genre_id: {
         type: DataTypes.INTEGER,
         references: {

@@ -1,0 +1,1 @@
+//routes to search for a specific genre or all the genres

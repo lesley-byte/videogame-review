@@ -1,0 +1,1 @@
+//routes to search for a specific game or all the games
