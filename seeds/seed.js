@@ -14,17 +14,18 @@ const seedUser = require('./userData');
 // use the sequelize.sync() and the bulkCreate() or create() methods to seed the database
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-  await seedCategory();
-  await seedDeveloper();
-  await seedGame();
-  await seedGamePlatform();
-  await seedGenre();
-  await seedPlatform();
-  await seedReview();
   await seedUser();
-
-  // close the connection to the database
+  await seedGenre();
+  await seedDeveloper();
+  await seedCategory();
+  await seedGame();
+  await seedPlatform();
+  await seedGamePlatform();
+  await seedReview();
   process.exit(0);
 };
+
+  // close the connection to the database
+ 
 // call the function to seed the database
 seedAll();
