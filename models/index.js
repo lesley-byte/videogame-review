@@ -50,4 +50,4 @@ Category.belongsTo(Genre,{
 
 //export the models with module.exports
 
-module.exports = { Category, Developer, Game, Genre, Platform, Review, User };
+module.exports = { Category, Developer, Game,GamePlatform, Genre, Platform, Review, User };
