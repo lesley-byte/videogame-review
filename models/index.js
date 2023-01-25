@@ -1,3 +1,5 @@
+//all the relationships between the tables/models
+
 // TODO require the rest of the models in the models folder
 const Category = require('./Category');
 const Developer = require('./Developer');

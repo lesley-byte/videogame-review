@@ -17,6 +17,7 @@ Review.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        //foreign key reference user table
         user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -24,6 +25,7 @@ Review.init(
                 key: 'id',
             },
         },
+        //foreign key references game table
         game_id: {
             type: DataTypes.INTEGER,
             references: {

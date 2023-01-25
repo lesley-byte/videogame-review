@@ -1,3 +1,4 @@
+//seed the platform table
 const { Platform } = require('../models');
 
 const platformData = [

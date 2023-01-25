@@ -1,3 +1,4 @@
+//manages all the seed and makes sure they are added to their appropriate tables
 // require sequelize and the models
 const sequelize = require('../config/connection');
 // require the seed files

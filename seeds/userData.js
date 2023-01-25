@@ -1,3 +1,5 @@
+//seeds users with hashed passwords
+
 const { User } = require('../models');
 // userData is an array of objects that will be users.
 const userData = [
