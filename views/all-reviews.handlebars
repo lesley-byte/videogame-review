@@ -1,3 +1,11 @@
 <section>
     <p> This is all-reviews.handlebars!</p>
+    <ul>
+        {{#each reviews as |review|}}
+        <li>Review title: {{review.review_title}}</li>
+        <li>Review text: {{review.review_text}}</li>
+        <li>Review date: {{review.review_date}}</li>
+        <li>Review game id: {{review.review_game_id}}</li>
+        <li>Review user id: {{review.review_user_id}}</li>
+        {{/each}}
 </section>
