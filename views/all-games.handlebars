@@ -1,3 +1,9 @@
 <section>
     <p> This is all-games.handlebars!</p>
+    <ul>
+        {{!-- will show the games --}}
+        {{#each games as |game|}}
+        <li>Game name: {{game.game_name}}</li>
+        <li>Game developer id number: {{game.developer_id}}</li>
+        {{/each}}
 </section>

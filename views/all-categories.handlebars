@@ -1,3 +1,11 @@
+
+
 <section>
     <p> This is all-categories.handlebars!</p>
+    <ul>
+        {{#each categories as |category|}}
+        <li>Category name: {{category.category_name}}</li>
+        <li>Category genre id number: {{category.genre_id}}</li>
+        {{/each}}
+    </ul>
 </section>
