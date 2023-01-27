@@ -1,17 +1,24 @@
 // routes to view one category and all categories
 const router = require('express').Router();
-const { Category, Review, User } = require('../models');
+const { Category, Review, User, Genre } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all categories for
 router.get('/', withAuth, async (req, res) => {
   try {
-    const categoryData = await Category
-      .findAll
+    const categoryData = await Category.findAll({
+      include: [
+        {
+          model: Genre,
+          attributes: ['genre_name'],
+        },
+      ],
+    })
+      // .findAll
       //   {
       //   include: [{ model: Review}, {model: User }],
       // }
-      ()
+      // ()
       .catch((err) => {
         res.json(err);
       });
@@ -28,7 +35,15 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const categoryData = await Category.findByPk(
-      req.params.id
+      req.params.id,
+      {
+        include: [
+          {
+            model: Genre,
+            attributes: ['genre_name'],
+          },
+        ],
+      }
       //   {
       //   include: [{ model: Review }, { model: User }],
       // }

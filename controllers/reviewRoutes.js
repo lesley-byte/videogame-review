@@ -1,15 +1,26 @@
 //to search for one review or all reviews. Will also have post, get, put, delete routes for reviews
 const router = require('express').Router();
-const { Review, User, Category } = require('../models');
+const { Review, User, Category, Game } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all reviews
 router.get('/', withAuth, async (req, res) => {
   try {
-    const reviewData = await Review
-      .findAll
-      // {include: [{ model: User }, { model: Category }],}
-      ()
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Game,
+          attributes: ['game_name'],
+        },
+      ],
+    })
+      // .findAll
+      // // {include: [{ model: User }, { model: Category }],}
+      // ()
       .catch((err) => {
         res.json(err);
       });
@@ -24,7 +35,19 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findByPk(
-      req.params.id
+      req.params.id,
+      {
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+          {
+            model: Game,
+            attributes: ['game_name'],
+          },
+        ],
+      }
       // {include: [{ model: User }, { model: Category }],}
     ).catch((err) => {
       res.json(err);
