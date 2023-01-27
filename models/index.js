@@ -39,6 +39,15 @@ Game.belongsTo(Developer,{
     foreignKey: 'developer_id'
     });
 
+    Game.hasMany(Review,{
+        foreignKey: 'game_id',
+        onDelete: 'SET NULL'
+    });
+    
+    Review.belongsTo(Game,{
+        foreignKey: 'game_id'
+    })
+
 Genre.hasMany(Category,{
     foreignKey: 'genre_id',
     onDelete: 'SET NULL'
