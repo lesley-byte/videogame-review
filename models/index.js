@@ -47,6 +47,14 @@ Category.belongsTo(Genre,{
     foreignKey: 'genre_id'
     });
 
+    Game.hasMany(Review,{
+        foreignKey: 'game_id',
+        onDelete: 'SET NULL'
+    });
+    
+    Review.belongsTo(Game,{
+        foreignKey: 'game_id'
+    })
 
 //export the models with module.exports
 
