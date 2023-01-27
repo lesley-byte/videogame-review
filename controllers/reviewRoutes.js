@@ -12,11 +12,11 @@ router.get('/', withAuth, async (req, res) => {
           model: User,
           attributes: ['username'],
         },
-        {
+       {
           model: Game,
           attributes: ['game_name'],
-        },
-      ],
+       },
+    ],
     })
       // .findAll
       // // {include: [{ model: User }, { model: Category }],}
