@@ -1,8 +1,8 @@
 <section>
-    <p> This is all-reviews.handlebars!</p>
+    <p class="card-title"> This is all-reviews.handlebars!</p>
     <ul>
         {{#each reviews as |review|}}
-        <li>Review title: {{review.review_title}}</li>
+        <li class="card-title">Review title: {{review.review_title}}</li>
         <li>Review text: {{review.review_text}}</li>
         <li>Review date: {{review.review_date}}</li>
         <li>Review game name: {{review.game.game_name}}</li>

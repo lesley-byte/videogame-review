@@ -1,5 +1,7 @@
 {{!-- form to add new reviews --}}
 <section>
+    <h2>{{user.username}}</h2>
+    <h3>Add a review user number <span id="review_user">{{user.id}}</span></h3>
     <form>
         <label for="review_title">Review Title</label>
         <input type="text" name="review_title" id="review_title">
@@ -10,3 +12,4 @@
         <button type="submit">Submit</button>
     </form>
 </section>
+<script src="./js/newreview.js"></script>

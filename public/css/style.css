@@ -1,0 +1,101 @@
+/* I guess this will be bootstrap? */
+body {
+    width: 99%;
+  }
+
+  .card {
+    opacity: 0.7 !important;
+  }
+  /* on hover card glows and turns more white */
+  .card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2) !important;
+    opacity: 1 !important;
+  }
+
+  svg {
+    animation: move 5s ease-in-out infinite;
+  }
+  
+  @keyframes move {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.swoosh {
+    overflow: hidden;
+    border-right: .15em solid lightslategray;
+    white-space: nowrap;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: lightslategray; }
+
+  }
+
+
+  a {
+    display:inline-block; /* display the link as a block-level element */
+    padding: 10px 15px; /* add padding to the link */
+    border-radius: 5px; /* add rounded corners to the link */
+    text-align:center; /* center the text within the link */
+    text-decoration: none; /* remove the underline from the link */
+    font-size: 16px; /* set the font size */
+    transition: background-color 0.3s ease; /* add a transition effect to the background color */
+    color: green; /* sets the text color to green */
+        /* other CSS styles */
+        animation: shadow-animation 2s infinite linear;
+        animation-delay: 2s; /* the animation will start after 2s */
+        animation-direction: alternate; /* the animation will alternate direction between the from and to keyframes */
+    }
+    
+
+
+a:hover {
+    background-color: black; /* change the background color when the mouse is hovering over the link */
+    color: grey; /* change the text color when the mouse is hovering over the link */
+}
+
+a:before {
+    content: ""; /* clear the content */
+    display: block; /* display the pseudo-element as a block-level element */
+    position: absolute; /* position the pseudo-element absolutely */
+    width: 100%; /* set the width to be the same as the link */
+    height: 2px; /* set the height of the highlight */
+    bottom: 0; /* position the highlight at the bottom of the link */
+    left: 0; /* position the highlight at the left edge of the link */
+    background-color: #00bfff; /* set the background color of the highlight */
+    transform: scaleX(0); /* set the initial scale of the highlight to 0 */
+    transform-origin: left; /* set the transform origin to the left edge of the highlight */
+    transition: transform 0.3s ease; /* add a transition effect to the transform property */
+}
+a:hover:before {
+    transform: scaleX(1); /* increase the scale of the highlight to 1 when the mouse is hovering over the link */
+}
+
+@keyframes shadow-animation {
+    from {
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    to {
+        box-shadow: -2px -2px 4px rgba(0,0,0,0.5);
+    }
+}
+
+  /* media queries to make grass smaller for mobile phones */
+  
+  @media only screen and (max-width: 800px) {
+    }
+  
+  @media only screen and (max-width: 600px) {
+ 
+  }
