@@ -14,6 +14,10 @@ router.get('/', withAuth, async (req, res) => {
         {
           model: Developer,
           attributes:['developer_name']
+        },
+        {
+          model: Category,
+          attributes:['category_name']
         }
       ]
     })
