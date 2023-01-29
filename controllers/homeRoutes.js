@@ -1,12 +1,21 @@
 //routes for the login and homepage
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET homepage
-router.get('/', (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
+    const reviewData = await Review.findAll({
+      where: {
+        user_id: req.session.userId,
+      },
+    });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+
     res.render('homepage', {
+      layout: 'main',
+      reviews,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

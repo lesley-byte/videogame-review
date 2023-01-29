@@ -147,6 +147,34 @@ router.get('/update/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/delete/:id', withAuth, async (req, res) => {
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Game,
+          attributes: ['game_name'],
+        },
+      ],
+    }).catch((err) => {
+      res.json(err);
+      return;
+    });
+    if (!reviewData) {
+      res.status(404).json({ message: 'no review found with this id' });
+      return;
+    }
+    const review = reviewData.get({ plain: true });
+    res.render('delete-review', { review });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.update(
