@@ -4,7 +4,7 @@ const newReviewFormHandler = async (event) => {
 // get the values from the form
     const reviewTitle = document.querySelector('#review_title').value.trim();
     const reviewText = document.querySelector('#review_text').value.trim();
-    const reviewUser = document.querySelector('#review_user').value.trim();
+    const reviewUser = document.querySelector('#user').value.trim();
     const reviewGame = document.querySelector('#review_game_name').value.trim();
 
     if (reviewTitle && reviewText && reviewUser && reviewGame) {
