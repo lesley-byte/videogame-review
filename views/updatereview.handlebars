@@ -1,0 +1,21 @@
+<section>
+    <p class="card-title">This is updateReview.handlebars</p>
+    <ul>
+        <li class="card-title">Review title: {{review.review_title}}</li>
+        <li>Review text: {{review.review_text}}</li>
+        <li id="user">Review user name: {{review.user.username}}</li>
+        <li id="gamename">Review game name: {{review.game.game_name}}</li>
+        <li>Date of review: {{review.review_date}}</li>
+    </ul>
+
+<form id="update-review-form">
+   <input type="hidden" name="review-id" value="{{review.id}}" />
+  <label>New Review Title:</label><br>
+  <input type="text" id="title" value="review title"><br>
+  <label for="review">New Review:</label><br>
+  <input type="text" id="newreview" value="review text"><br><br>
+   <button type="submit" class="btn text-white-50 ">Update</button>
+</form>
+</section>
+
+<script src="/js/updateReview.js"></script>
