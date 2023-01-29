@@ -12,22 +12,24 @@ router.get('/', withAuth, async (req, res) => {
           model: User,
           attributes: ['username'],
         },
-       {
+        {
           model: Game,
           attributes: ['game_name'],
-       },
-    ],
+        },
+      ],
     })
       // .findAll
       // // {include: [{ model: User }, { model: Category }],}
       // ()
       .catch((err) => {
         res.json(err);
+        return;
       });
     const reviews = reviewData.map((review) => review.get({ plain: true }));
     res.render('all-reviews', { reviews });
   } catch (err) {
     res.status(500).json(err);
+    return;
   }
 });
 
@@ -51,23 +53,27 @@ router.get('/:id', withAuth, async (req, res) => {
       // {include: [{ model: User }, { model: Category }],}
     ).catch((err) => {
       res.json(err);
+      return;
     });
     if (!reviewData) {
       res.status(404).json({ message: 'no review found with this id' });
+      return;
     }
     const review = reviewData.get({ plain: true });
     res.render('review', { review });
   } catch (err) {
     res.status(500).json(err);
+    return;
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.create(req.body);
     res.status(200).json(reviewData);
   } catch (err) {
     res.status(500).json(err);
+    return;
   }
 });
 
@@ -79,6 +85,7 @@ router.delete('/:id', async (req, res) => {
       },
     }).catch((err) => {
       res.json(err);
+      return;
     });
     if (!reviewData) {
       res.status(404).json({ message: 'No review found with that id!' });
@@ -87,18 +94,70 @@ router.delete('/:id', async (req, res) => {
     res.status(200).json(readerData);
   } catch (err) {
     res.status(500).json(err);
+    return;
   }
 });
 
-router.put('/:id', async (req, res) => {
+// router.put('/:id', withAuth, async (req, res) => {
+//   try {
+//     const reviewData = await Review.update(
+//       {
+//         review_text: req.body.review_text,
+//       },
+//       { where: { id: req.params.id } }
+//     ).catch((err) => {
+//       res.json(err);
+//     });
+//     if (!reviewData) {
+//       res.status(404).json({ message: 'No review found with that id!' });
+//       return;
+//     }
+//     res.status(200).json(reviewData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+//reviews/update/:id
+router.get('/update/:id', withAuth, async (req, res) => {
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Game,
+          attributes: ['game_name'],
+        },
+      ],
+    }).catch((err) => {
+      res.json(err);
+      return;
+    });
+    if (!reviewData) {
+      res.status(404).json({ message: 'no review found with this id' });
+      return;
+    }
+    const review = reviewData.get({ plain: true });
+    res.render('updatereview', { review });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.update(
       {
-        review_text: req.body.review_text,
+        review_text: req.body.text,
+        review_title: req.body.title,
       },
       { where: { id: req.params.id } }
     ).catch((err) => {
       res.json(err);
+      return;
     });
     if (!reviewData) {
       res.status(404).json({ message: 'No review found with that id!' });
@@ -107,7 +166,7 @@ router.put('/:id', async (req, res) => {
     res.status(200).json(reviewData);
   } catch (err) {
     res.status(500).json(err);
+    return;
   }
 });
-
 module.exports = router;

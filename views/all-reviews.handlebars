@@ -1,11 +1,18 @@
 <section>
     <p class="card-title"> This is all-reviews.handlebars!</p>
+    {{#each reviews as |review|}}
     <ul>
-        {{#each reviews as |review|}}
         <li class="card-title">Review title: {{review.review_title}}</li>
         <li>Review text: {{review.review_text}}</li>
         <li>Review date: {{review.review_date}}</li>
         <li>Review game name: {{review.game.game_name}}</li>
         <li>Review user name: {{review.user.username}}</li>
-        {{/each}}
+    </ul>  
+        
+    <a href="/reviews/update/{{review.id}}">
+        <h3>Update review</h3>
+    </a>
+    {{/each}}
+    
+
 </section>
