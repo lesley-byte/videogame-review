@@ -7,14 +7,14 @@
         <li id="gamename">Review game name: {{review.game.game_name}}</li>
         <li>Date of review: {{review.review_date}}</li>
     </ul>
-</section>
 
-<form>
+<form id="update-review-form">
   <label>New Review Title:</label><br>
   <input type="text" id="title" value="review title"><br>
   <label for="review">New Review:</label><br>
   <input type="text" id="newreview" value="review text"><br><br>
-  <input type="submit" id="submit" value="Submit">
+   <button type="submit" class="btn text-white-50 ">Update</button>
 </form>
+</section>
 
-<script src="../public/js/updatereview.js"></script>
+<script src="/js/updateReview.js"></script>
