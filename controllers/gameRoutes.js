@@ -12,38 +12,33 @@ const {
 } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all games
+// get all games and also get all developers and categories
 router.get('/', withAuth, async (req, res) => {
   try {
     const gameData = await Game.findAll({
       include: [
         {
           model: Developer,
-          attributes: ['developer_name'],
         },
         {
           model: Category,
-          attributes: ['category_name'],
         },
       ],
-    }).catch((err) => {
-      res.json(err);
     });
-
-
-    const Developerdata = await Developer.findAll();
-    const developers = Developerdata.map((developers) => {
-      developers.get({ plain: true });
-    });
-    const Categorydata = await Category.findAll();
-    const categories = Categorydata.map((categories) => {
-      categories.get({ plain: true });
-    });
-    // {include: [{ model: Review}, { model: User }, { model: Category }, { model: Genre }, { model: Platform }],}
-
     const games = gameData.map((game) => game.get({ plain: true }));
+    const developerData = await Developer.findAll();
+    const developers = developerData.map((developer) =>
+      developer.get({ plain: true })
+    );
+    const categoryData = await Category.findAll();
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+
     res.render('all-games', {
-      games, categories, developers,
+      games,
+      categories,
+      developers,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,
       username: req.session.username,

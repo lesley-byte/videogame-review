@@ -16,26 +16,29 @@
 
     <form id='add-game-form'>
       <label>Game Name:</label><br />
-      <input type='text' id='new-game' value='game-name' /><br /><br />
+      <input type='text' id='new-game' placeholder='Name of Game' /><br /><br />
       <label>Category:</label><br />
-      <select id='myCategories'></select><br /><br />
+
+      <select id='myCategories'>
       {{log categories}}
       {{#each categories as |category|}}
         <option value='{{category.id}}'>{{category.category_name}}</option>
       
       {{/each}}
-      {{log games}}
+      </select>
+      </br>
       
       {{! <input type='text' id='gamecategory' value='category' /><br /> }}
       <label>Developer:</label><br />
-      <select id='myDevelopers'></select><br /><br />
+      <select id='myDevelopers'>
       {{#each developers as |developer|}}
         <option value='{{developer.id}}'>{{developer.developer_name}}</option>
       {{/each}}
-      {{log developers}}
+      </select>
+      </br>
       {{! <input type='text' id='developer' value='name of developer' /><br /><br /> }}
-      <label>Date Created:</label><br />
-      <input type='text' id='date' value='datecreated' /><br /><br />
+      <label>Year Created:</label><br />
+      <input type='text' id='date' placeholder="yyyy" /><br /><br />
       <button type='submit' class='btn text-white-50'>Submit</button>
     </form>
   </div>
