@@ -37,7 +37,7 @@ router.get('/', withAuth, async (req, res) => {
 
     res.render('all-games', {
       games,
-      categories,
+      categories, 
       developers,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,
@@ -72,7 +72,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// get one game
+// get one game and show all possible platforms 
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findAll({
@@ -127,10 +127,16 @@ router.get('/:id', withAuth, async (req, res) => {
       gamePlatform.get({ plain: true })
     );
     const game = gameData.get({ plain: true });
-    console.log(game);
+
+    const platformData = await Platform.findAll({
+    });
+    const platforms = platformData.map((platform) =>
+      platform.get({ plain: true })
+      );
     res.render('game', {
       game,
       gamePlatforms,
+      platforms,
       reviews,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,
@@ -141,4 +147,36 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
+// add a new platform to a game with post request
+
+router.post('/addplatform', withAuth, async (req, res) => {
+  try {
+    const newGamePlatform = await GamePlatform.create({
+      game_id: req.body.game_id,
+      platform_id: req.body.platform_id,
+    }).catch((err) => {
+      res.json(err);
+      return;
+    });
+    if (!newGamePlatform) {
+      res.status(404).json({ message: 'Cannot add new platform' });
+      return;
+    }
+    res.status(200).json(newGamePlatform);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+    return;
+  }
+});
+
 module.exports = router;
+
+
+
+
+
+
+
+
+
