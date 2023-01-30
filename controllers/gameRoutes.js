@@ -1,6 +1,6 @@
 //routes to search for a specific game or all the games
 const router = require('express').Router();
-const { Game, Developer, Review, User, Category, Genre, Platform } = require('../models');
+const { Game, Developer, Review, User, Category, Genre, Platform, GamePlatform } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all games
@@ -18,6 +18,10 @@ router.get('/', withAuth, async (req, res) => {
         {
           model: Category,
           attributes:['category_name']
+        },
+        {
+          model: Platform,
+          attributes:['platform_name']
         }
       ]
     })
@@ -57,17 +61,42 @@ router.get('/:id', withAuth, async (req, res) => {
             attributes: ['category_name'],
           }
         ],
-      }
+      }).catch((err) => {
+        res.json(err);
+        return;
+        });
 
-    ).catch((err) => {
-      res.json(err);
-    });
-    if (!gameData) {
-      res.status(404).json({ message: 'no game found with this id!' });
-    }
+        if (!gameData) {
+          res.status(404).json({ message: 'no game found with this id!' });
+        }
+        const gamePlatformData = await GamePlatform.findAll({
+              where: {
+                game_id: req.params.id,
+                },
+                include: [
+                  {
+                    model: Platform,
+                    attributes: ['platform_name'],
+                  },
+                  {
+                    model: Game,
+                  }
+                ],
+              }
+              // {include: [{ model: User }, { model: Category }],}
+        
+            ).catch((err) => {
+              res.json(err);
+              return;
+            });
+            if (!gamePlatformData) {
+              res.status(404).json({ message: 'no game found with this id!' });
+            }
+            const gamePlatforms = gamePlatformData.map((gamePlatform) => gamePlatform.get({ plain: true }));
     const game = gameData.get({ plain: true });
     console.log(game);
     res.render('game', { game,
+      gamePlatforms,
       reviews,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,

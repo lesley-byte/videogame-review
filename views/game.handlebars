@@ -4,8 +4,18 @@
     
     <p>Game developer: {{game.developer.developer_name}}</p>
     <p>Game category: {{game.category.category_name}}</p>
+
+    <p> Available Game platforms: </p>
+    <ul>
+    {{#each gamePlatforms as |gamePlatform|}}
+        <li>{{gamePlatform.platform.platform_name}}</li>
+    {{/each}}
+    </ul>
+
     <a href="../reviews/add/{{game.id}}">Add a review</a>
   <h3>Reviews: </h3>
+ 
+  {{log gamePlatforms}}
 
     <ul>
     {{#each reviews as |review|}}

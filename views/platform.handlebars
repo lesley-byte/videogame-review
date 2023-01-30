@@ -1,5 +1,8 @@
 {{!-- will show the platforms --}}
 <section>
-    <h2 class="card-title">{{platform.platform_name}}</h2>
+    <h2 class="card-title">Games for platform:{{platform.platform_name}}</h2>
+    {{#each gameplatforms as |gameplatform|}}
+        <p>{{gameplatform.game.game_name}}</p>
+    {{/each}}
     
 </section>
