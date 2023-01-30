@@ -11,5 +11,5 @@ const deleteReviewFormHandler = async (event) => {
 };
 
 document
-  .querySelector('#delete-review-form')
-  .addEventListener('submit', deleteReviewFormHandler);
+  .querySelector('#delete-btn')
+  .addEventListener('click', deleteReviewFormHandler);

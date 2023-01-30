@@ -123,6 +123,30 @@ router.delete('/:id', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
+// reviews/add to add a review for the game in the url
+router.get('/add/:id', withAuth, async (req, res) => {
+  try {
+    const gameData = await Game.findByPk(
+      req.params.id, 
+    ).catch((err) => {
+      res.json(err);
+      return;
+    });
+    if (!gameData) {
+      res.status(404).json({ message: 'no game found with this id' });
+      return;
+    }
+    const game = gameData.get({ plain: true });
+    res.render('add-reviews', { game,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 //reviews/update/:id
 router.get('/update/:id', withAuth, async (req, res) => {

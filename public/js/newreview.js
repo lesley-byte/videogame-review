@@ -5,7 +5,7 @@ const newReviewFormHandler = async (event) => {
     const reviewTitle = document.querySelector('#review_title').value.trim();
     const reviewText = document.querySelector('#review_text').value.trim();
     const reviewUser = document.querySelector('#user').value.trim();
-    const reviewGame = document.querySelector('#review_game_name').value.trim();
+    const reviewGame = document.querySelector('#review_game_id').value.trim();
 
     if (reviewTitle && reviewText && reviewUser && reviewGame) {
         const response = await fetch('/reviews', {
