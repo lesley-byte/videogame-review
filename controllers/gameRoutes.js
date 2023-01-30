@@ -12,38 +12,33 @@ const {
 } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all games
+// get all games and also get all developers and categories
 router.get('/', withAuth, async (req, res) => {
   try {
     const gameData = await Game.findAll({
       include: [
         {
           model: Developer,
-          attributes: ['developer_name'],
         },
         {
           model: Category,
-          attributes: ['category_name'],
         },
       ],
-    }).catch((err) => {
-      res.json(err);
     });
-
-
-    const Developerdata = await Developer.findAll();
-    const developers = Developerdata.map((developers) => {
-      developers.get({ plain: true });
-    });
-    const Categorydata = await Category.findAll();
-    const categories = Categorydata.map((categories) => {
-      categories.get({ plain: true });
-    });
-    // {include: [{ model: Review}, { model: User }, { model: Category }, { model: Genre }, { model: Platform }],}
-
     const games = gameData.map((game) => game.get({ plain: true }));
+    const developerData = await Developer.findAll();
+    const developers = developerData.map((developer) =>
+      developer.get({ plain: true })
+    );
+    const categoryData = await Category.findAll();
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+
     res.render('all-games', {
-      games, categories, developers,
+      games,
+      categories, 
+      developers,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,
       username: req.session.username,
@@ -77,7 +72,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// get one game
+// get one game and show all possible platforms 
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findAll({
@@ -132,10 +127,16 @@ router.get('/:id', withAuth, async (req, res) => {
       gamePlatform.get({ plain: true })
     );
     const game = gameData.get({ plain: true });
-    console.log(game);
+
+    const platformData = await Platform.findAll({
+    });
+    const platforms = platformData.map((platform) =>
+      platform.get({ plain: true })
+      );
     res.render('game', {
       game,
       gamePlatforms,
+      platforms,
       reviews,
       loggedIn: req.session.loggedIn,
       user_id: req.session.userId,
@@ -143,6 +144,29 @@ router.get('/:id', withAuth, async (req, res) => {
     });
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+// add a new platform to a game with post request
+
+router.post('/addplatform', withAuth, async (req, res) => {
+  try {
+    const newGamePlatform = await GamePlatform.create({
+      game_id: req.body.game_id,
+      platform_id: req.body.platform_id,
+    }).catch((err) => {
+      res.json(err);
+      return;
+    });
+    if (!newGamePlatform) {
+      res.status(404).json({ message: 'Cannot add new platform' });
+      return;
+    }
+    res.status(200).json(newGamePlatform);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+    return;
   }
 });
 
