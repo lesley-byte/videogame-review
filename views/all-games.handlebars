@@ -1,9 +1,45 @@
-<section>
-    <h2 class="card-title"> All Games</h2>
+<div class='row align-items-start'>
+  <div class='col'>
+    <h2 class='card-title'> All Games</h2>
+    <h3>Choose a Game to add a review!</h3>
     <ul>
-        {{!-- will show the games --}}
-        {{#each games as |game|}}
-        <li>Game name: <a href="./games/{{game.id}}">{{game.game_name}}</a></li>
+      {{! will show the games }}
+      {{#each games as |game|}}
+        <li>Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
         <li>Game category: {{game.category.category_name}}</li>
-        {{/each}}
-</section>
+      {{/each}}
+    </ul>
+  </div>
+  <div class='col'>
+    <h3>Don't see your game here?</h3>
+    <button id='addbutton'>Add a Game</button><br /><br />
+
+    <form id='add-game-form'>
+      <label>Game Name:</label><br />
+      <input type='text' id='new-game' value='game-name' /><br /><br />
+      <label>Category:</label><br />
+      <select id='myCategories'></select><br /><br />
+      {{log categories}}
+      {{#each categories as |category|}}
+        <option value='{{category.id}}'>{{category.category_name}}</option>
+      
+      {{/each}}
+      {{log games}}
+      
+      {{! <input type='text' id='gamecategory' value='category' /><br /> }}
+      <label>Developer:</label><br />
+      <select id='myDevelopers'></select><br /><br />
+      {{#each developers as |developer|}}
+        <option value='{{developer.id}}'>{{developer.developer_name}}</option>
+      {{/each}}
+      {{log developers}}
+      {{! <input type='text' id='developer' value='name of developer' /><br /><br /> }}
+      <label>Date Created:</label><br />
+      <input type='text' id='date' value='datecreated' /><br /><br />
+      <button type='submit' class='btn text-white-50'>Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<script src='/js/addgame.js'></script>
