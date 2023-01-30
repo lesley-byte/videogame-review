@@ -19,10 +19,6 @@ router.get('/', withAuth, async (req, res) => {
           model: Category,
           attributes:['category_name']
         },
-        {
-          model: Platform,
-          attributes:['platform_name']
-        }
       ]
     })
       // {include: [{ model: Review}, { model: User }, { model: Category }, { model: Genre }, { model: Platform }],}
