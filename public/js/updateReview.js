@@ -18,6 +18,7 @@ const newReviewFormHandler = async (event) => {
       'Content-Type': 'application/json',
     },
   });
+  document.location.replace('/');
 };
 
 document

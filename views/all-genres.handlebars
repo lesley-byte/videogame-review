@@ -1,7 +1,7 @@
 <section>
-    <p class="card-title"> This is all-genres.handlebars!</p>
+    <h2 class="card-title">All Genres</h2>
     <ul>
         {{#each genres as |genre|}}
-        <li>Genre name: {{genre.genre_name}}</li>
+        <li>Genre name: <a href="./genres/{{genre.id}}">{{genre.genre_name}}</a></li>
         {{/each}}
 </section>

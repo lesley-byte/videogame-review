@@ -12,9 +12,23 @@ const User = require('./User');
 
 // TODO: indicate the relationship between the models... hasMany, belongsTo, etc. as well as the foreign key
 // this part is broken....eeek 🔥🔥🔥🔥🗑️
-Game.belongsToMany(Platform, { through: GamePlatform, as: 'games_platforms' });
-Platform.belongsToMany(Game, { through: GamePlatform, as: 'platforms_games' });
-
+// Game.belongsToMany(Platform, { through: GamePlatform, as: 'games_platforms' });
+// Platform.belongsToMany(Game, { through: GamePlatform, as: 'platforms_games' });
+Game.hasMany(GamePlatform,{
+    foreignKey: 'game_id',
+    onDelete: 'SET NULL'
+    });
+GamePlatform.belongsTo(Game,{
+    foreignKey: 'game_id'
+    });
+Platform.hasMany(GamePlatform,{
+    foreignKey: 'platform_id',
+    onDelete: 'SET NULL'
+    });
+GamePlatform.belongsTo(Platform,{
+    foreignKey: 'platform_id'
+    });
+    
 User.hasMany(Review,{
     foreignKey: 'user_id',
     onDelete: 'SET NULL'

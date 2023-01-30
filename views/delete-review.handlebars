@@ -1,5 +1,5 @@
 <section>
-    <p class="card-title">This is delete-reviews.handlebars</p>
+    <p class="card-title">Delete this Review?</p>
     <ul>
         <li class="card-title">Review title: {{review.review_title}}</li>
         <li>Review text: {{review.review_text}}</li>
@@ -11,8 +11,8 @@
 <form id="delete-review-form">
    <input type="hidden" name="review-id" value="{{review.id}}" />
 
-   <button type="submit" class="btn text-white-50 ">Delete</button>
+   <button type="button" class="btn text-white-50 btn" id="delete-btn">Delete</button>
 </form>
 </section>
 
-<script src="/js/updateReview.js"></script>
+<script src="/js/deleteReview.js"></script>

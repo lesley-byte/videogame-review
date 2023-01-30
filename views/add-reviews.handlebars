@@ -1,15 +1,20 @@
 {{!-- form to add new reviews --}}
 <section>
-    <h2>{{user.username}}</h2>
-    <h3>Add a review user number <span id="review_user">{{user.id}}</span></h3>
-    <form>
+    <h2>{{username}}</h2>
+    <h3>Add a review,  <span id="user">{{username}}</span></h3>
+    <h3>Add a review for game <span id="review_game">{{game.game_name}}</span></h3>
+    <form id="new-review-form">
+
         <label for="review_title">Review Title</label>
         <input type="text" name="review_title" id="review_title">
         <label for="review_text">Review Text</label>
         <input type="text" name="review_text" id="review_text">
-        <label for="review_game_id">Review Game name</label>
-        <input type="text" name="review_game_name" id="review_game_name">
+        
+        <!-- default value is the game name -->
+        <input type="hidden" name="review_game_id" id="review_game_id" value="{{game.id}}"/>
+
         <button type="submit">Submit</button>
     </form>
 </section>
-<script src="./js/newreview.js"></script>
+
+<script src="/js/newreview.js"></script>

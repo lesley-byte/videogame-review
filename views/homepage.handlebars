@@ -1,10 +1,10 @@
 <section class="card-title"> 
-    This is homepage.handlebars 
+    This is my list of reviews: 
     {{#each reviews as |review|}}
     <a href="/reviews/update/{{review.id}}">
 
-    <p> this is the title: {{review.review_title}} </p>
+    <p> Review Title: {{review.review_title}} </p>
     </a>
-    <a href="/reviews/delete/{{review.id}}">Delete?</a>
+    <a href="/reviews/delete/{{review.id}}">Delete {{review.review_title}}?</a>
     {{/each}}
 </section>

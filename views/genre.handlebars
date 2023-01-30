@@ -1,7 +1,11 @@
 {{!-- will show the genres --}}
 <section>
-    <p class="card-title">This is genre.handlebars</p>
+    <h2 class="card-title">{{genre.genre_name}}</h2>
+
+{{#each categories as |category|}}
     <ul>
-        <li>Genre name: {{genre.genre_name}}</li>
+        <li>Category name: {{category.category_name}}</li>
     </ul>
+{{/each}}
+
 </section>
