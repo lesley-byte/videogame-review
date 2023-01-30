@@ -1,9 +1,9 @@
 {{!-- form to add new reviews --}}
 <section>
     <h2>{{username}}</h2>
-    <h3>Add a review,  <span id="review_user">{{username}}</span></h3>
+    <h3>Add a review,  <span id="user">{{username}}</span></h3>
     <h3>Add a review for game <span id="review_game">{{game.game_name}}</span></h3>
-    <form class="new-review-form">
+    <form id="new-review-form">
 
         <label for="review_title">Review Title</label>
         <input type="text" name="review_title" id="review_title">
