@@ -1,7 +1,12 @@
 {{!-- will show developers --}}
 <section>
-    <p class="card-title">This is developer .handlebars</p>
+    <h2 class="card-title">Games made by: {{developer.developer_name}}</h2>
+
+
+    {{#each games as |game|}}
     <ul>
-        <li>Developer name: {{developer.developer_name}}</li>
+        <li>Game name: {{game.game_name}}</li>
     </ul>
+    {{/each}}
+
 </section>

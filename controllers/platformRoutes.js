@@ -16,7 +16,10 @@ router.get('/', withAuth, async (req, res) => {
     const platforms = platformData.map((platform) =>
       platform.get({ plain: true })
     );
-    res.render('all-platforms', { platforms });
+    res.render('all-platforms', { platforms,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -35,7 +38,10 @@ router.get('/:id', withAuth, async (req, res) => {
       res.status(404).json({ message: 'no platform found with this id!' });
     }
     const platform = platformData.get({ plain: true });
-    res.render('platform', { platform });
+    res.render('platform', { platform,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
   }

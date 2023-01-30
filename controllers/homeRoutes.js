@@ -17,6 +17,8 @@ router.get('/', withAuth, async (req, res) => {
       layout: 'main',
       reviews,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username,
     });
   } catch (err) {
     res.status(500).json(err);

@@ -26,7 +26,10 @@ router.get('/', withAuth, async (req, res) => {
         res.json(err);
       });
     const games = gameData.map((game) => game.get({ plain: true }));
-    res.render('all-games', { games });
+    res.render('all-games', { games,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
     console.log(games);
   } catch (err) {
     res.status(500).json(err);
@@ -36,27 +39,26 @@ router.get('/', withAuth, async (req, res) => {
 // get one game
 router.get('/:id', withAuth, async (req, res) => {
   try {
+    const reviewData = await Review.findAll({
+      where: {
+        game_id: req.params.id,
+      }
+    });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
     const gameData = await Game.findByPk(req.params.id,
-      {include: [
-        
-        {
-          model: Developer,
-          attributes:['developer_name']
-        },
-        {
-          model: Category,
-          attributes:['category_name']
-        }
-      ]
-    }
-      //     {
-      //   include: [
-      //     { model: Review },
-      //     { model: User },
-      //     { model: Category },
-      //     { model: Genre },
-      //     { model: Platform },
-      //   ],}
+      {
+        include: [
+          {
+            model: Developer,
+            attributes: ['developer_name'],
+          },
+          {
+            model: Category,
+            attributes: ['category_name'],
+          }
+        ],
+      }
+
     ).catch((err) => {
       res.json(err);
     });
@@ -65,7 +67,11 @@ router.get('/:id', withAuth, async (req, res) => {
     }
     const game = gameData.get({ plain: true });
     console.log(game);
-    res.render('game', { game });
+    res.render('game', { game,
+      reviews,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
   }

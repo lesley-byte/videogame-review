@@ -1,17 +1,14 @@
 <section>
-    <p class="card-title"> This is all-reviews.handlebars!</p>
+    <h2 class="card-title"> All reviews </h2>
     {{#each reviews as |review|}}
     <ul>
-        <li class="card-title">Review title: {{review.review_title}}</li>
-        <li>Review text: {{review.review_text}}</li>
-        <li>Review date: {{review.review_date}}</li>
-        <li>Review game name: {{review.game.game_name}}</li>
-        <li>Review user name: {{review.user.username}}</li>
+        <li class="card-header">Review title: <a href="./reviews/{{review.id}}"> {{review.review_title}} </a></li>
+        {{!-- <li>Review: {{review.review_text}}</li> --}}
+        <li>For: {{review.game.game_name}}</li>
+        <li>by: {{review.user.username}}</li>
+        <li>On: {{format_date review.review_date}}</li>
     </ul>  
         
-    <a href="/reviews/update/{{review.id}}">
-        <h3>Update review</h3>
-    </a>
     {{/each}}
     
 

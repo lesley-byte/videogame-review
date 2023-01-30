@@ -1,9 +1,14 @@
 {{!-- will show the games --}}
 <section>
-    <p class="card-title">This is game.handlebars</p>
+    <h2 class="card-title">Game name: {{game.game_name}}</h2>
+    
+    <p>Game developer: {{game.developer.developer_name}}</p>
+    <p>Game category: {{game.category.category_name}}</p>
+  <h3>Reviews: </h3>
+
     <ul>
-        <li>Game name: {{game.game_name}}</li>
-        <li>Game developer: {{game.developer.developer_name}}</li>
-        <li>Game category: {{game.category.category_name}}</li>
+    {{#each reviews as |review|}}
+        <li>Review title: {{review.review_title}}</li>
+    {{/each}}
     </ul>
 </section>

@@ -26,7 +26,10 @@ router.get('/', withAuth, async (req, res) => {
         return;
       });
     const reviews = reviewData.map((review) => review.get({ plain: true }));
-    res.render('all-reviews', { reviews });
+    res.render('all-reviews', { reviews,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
     return;
@@ -60,7 +63,10 @@ router.get('/:id', withAuth, async (req, res) => {
       return;
     }
     const review = reviewData.get({ plain: true });
-    res.render('review', { review });
+    res.render('review', { review,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
     return;
@@ -141,7 +147,10 @@ router.get('/update/:id', withAuth, async (req, res) => {
       return;
     }
     const review = reviewData.get({ plain: true });
-    res.render('updatereview', { review });
+    res.render('updatereview', { review,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -169,7 +178,10 @@ router.get('/delete/:id', withAuth, async (req, res) => {
       return;
     }
     const review = reviewData.get({ plain: true });
-    res.render('delete-review', { review });
+    res.render('delete-review', { review,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username, });
   } catch (err) {
     res.status(500).json(err);
   }

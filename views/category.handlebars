@@ -1,8 +1,14 @@
 {{!-- will show categories --}}
 <section>
-    <p class="card-title">This is category .handlebars</p>
+    <h2 class="card-title">Category name: {{category.category_name}}</h2>
+    <p>Category genre: {{category.genre.genre_name}}</p>
+
+
+    {{#each games as |game|}}
+    {{log game}}
     <ul>
-        <li>Category name: {{category.category_name}}</li>
-        <li>Category genre: {{category.genre.genre_name}}</li>
+        <li>Game name: {{game.game_name}}</li>
     </ul>
+    {{/each}}
+
 </section>

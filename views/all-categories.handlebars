@@ -1,11 +1,11 @@
 
 
 <section>
-    <p class="card-title"> This is all-categories.handlebars!</p>
+    <h2 class="card-title"> All Categories</h2>
     <ul>
         {{#each categories as |category|}}
-        <li>Category name: {{category.category_name}}</li>
-        <li>Category genre: {{category.genre.genre_name}}</li>
+        <li>Category: <a href="./categories/{{category.id}}">{{category.category_name}}</a></li>
+        <li>in genre:{{category.genre.genre_name}}</li>
         {{/each}}
     </ul>
 </section>

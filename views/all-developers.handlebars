@@ -1,8 +1,9 @@
 <section>
-    <p class="card-title"> This is all-developers.handlebars!</p>
+    <h2 class="card-title"> All Developers</h2>
     <ul>
         {{#each developers as |developer|}}
-        <li>Developer name: {{developer.developer_name}}</li>
-        <li>Developer id number: {{developer.developer_id}}</li>
+        <li>Developer name: <a href="./developers/{{developer.id}}">{{developer.developer_name}}</a></li>
+        
+        {{!-- <li>Developer id number: {{developer.developer_id}}</li> --}}
         {{/each}}
 </section>
