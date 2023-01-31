@@ -24,8 +24,9 @@ This is a video game review website deployed to heroku. It is a full stack appli
 
 
 ## Usage
-
     You can login to the database, the database will capture your name and read and look up video game reviews. You can add platforms and games. The user can submit to the homepage and see their reviews appear on the homepage.
+
+    
 ## Website  
 
 [Link to the website]()
