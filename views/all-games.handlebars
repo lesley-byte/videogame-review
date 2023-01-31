@@ -6,7 +6,9 @@
       {{! will show the games }}
       {{#each games as |game|}}
         <li>Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
-        <li>Game category: {{game.category.category_name}}</li>
+        <li style='font-size: 12px;'>Game category:
+          {{game.category.category_name}}</li>
+        <br />
       {{/each}}
     </ul>
   </div>
@@ -20,26 +22,25 @@
       <label>Category:</label><br />
 
       <select id='myCategories'>
-      {{log categories}}
-      {{#each categories as |category|}}
-        <option value='{{category.id}}'>{{category.category_name}}</option>
-      
-      {{/each}}
-      </select>
-      </br>
+        {{log categories}}
+        {{#each categories as |category|}}
+          <option value='{{category.id}}'>{{category.category_name}}</option>
 
-      
+        {{/each}}
+      </select>
+      <br />
+
       {{! <input type='text' id='gamecategory' value='category' /><br /> }}
       <label>Developer:</label><br />
       <select id='myDevelopers'>
-      {{#each developers as |developer|}}
-        <option value='{{developer.id}}'>{{developer.developer_name}}</option>
-      {{/each}}
+        {{#each developers as |developer|}}
+          <option value='{{developer.id}}'>{{developer.developer_name}}</option>
+        {{/each}}
       </select>
-      </br>
+      <br />
       {{! <input type='text' id='developer' value='name of developer' /><br /><br /> }}
       <label>Year Created:</label><br />
-      <input type='text' id='date' placeholder="yyyy" /><br /><br />
+      <input type='text' id='date' placeholder='yyyy' /><br /><br />
       <button type='submit' class='btn text-white-50'>Submit</button>
     </form>
   </div>

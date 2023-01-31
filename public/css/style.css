@@ -152,6 +152,11 @@ a:hover:before {
   display: block;
 }
 
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
 /* media queries to make grass smaller for mobile phones */
 
 @media only screen and (max-width: 800px) {
