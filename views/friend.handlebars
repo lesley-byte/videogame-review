@@ -1,0 +1,22 @@
+<section>
+    <h2 class="card-title">Friend Page for {{friend.user.username}}</h2>
+    <ul>
+       {{log friend.id}}
+        <h3>{{friend.user.username}}'s Reviews</h3>
+        {{#each reviews as |review|}}
+        <li>
+
+           <a href="/../reviews/{{review.id}}" <h4>{{review.review_title}}</h4></a>
+            <p>For: {{review.game.game_name}}</p>
+            {{/each}}
+            {{log friend}}
+    </ul>
+        <form id="delete-friend-form" action="/api/friends/{{friend.id}}" method="PUT">
+            <input type="hidden" name="friend-id" value="{{friend.id}}" />
+            <button type="button" id="delete-btn" class="btn btn-danger">Delete Friend</button>
+        </form>
+
+</section>
+
+<script src="/js/deleteFriend.js"></script>
+

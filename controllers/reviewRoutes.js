@@ -78,6 +78,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.create(
       {
+        review_rating: req.body.review_rating,
         review_title: req.body.review_title,
         review_text: req.body.review_text,
         user_id: req.session.userId,
@@ -232,6 +233,7 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.update(
       {
+        review_rating: req.body.rating,
         review_text: req.body.text,
         review_title: req.body.title,
       },

@@ -37,16 +37,7 @@ User.init(
         len: [6],
       },
     },
-    // friends will be an array of user ids  TODO: figure out how to make this work🔥
-    userfriend_id: {
-      type: DataTypes.STRING,
-      allowNull: true,
-  },
-    // // blocked_users will be an array of user ids  TODO: figure out how to make this work🔥
-    // userblock_id: {
-    //   type: DataTypes.ARRAY(DataTypes.INTEGER),
-    //   allowNull: true,
-    // },
+
   },
   {
     hooks: {

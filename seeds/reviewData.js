@@ -3,6 +3,7 @@ const { Review } = require('../models');
 
 const reviewData = [
     {
+        review_rating: 5,
         review_title: 'awesome game!',
         review_text: 'This game is awesome!',
         user_id: 1,
@@ -10,6 +11,7 @@ const reviewData = [
         review_date: '2021-01-01',
     },
     {
+        review_rating: 3,
         review_title: 'awesome game!',
         review_text: 'This game is awesome!',
         user_id: 1,
@@ -17,6 +19,7 @@ const reviewData = [
         review_date: '2021-01-01',
     },
     {
+        review_rating: 4,
         review_title: 'awesome game!',
         review_text: 'This game is awesome!',
         user_id: 2,

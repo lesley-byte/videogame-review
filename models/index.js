@@ -3,6 +3,7 @@
 // TODO require the rest of the models in the models folder
 const Category = require('./Category');
 const Developer = require('./Developer');
+const Friend = require('./Friend');
 const Game = require('./Game');
 const GamePlatform = require('./GamePlatform');
 const Genre = require('./Genre');
@@ -28,7 +29,22 @@ Platform.hasMany(GamePlatform,{
 GamePlatform.belongsTo(Platform,{
     foreignKey: 'platform_id'
     });
-    
+
+User.hasMany(Friend,{
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+    });
+Friend.belongsTo(User,{
+    foreignKey: 'user_id'
+    });
+User.hasMany(Friend,{
+    foreignKey: 'friend_id',
+    onDelete: 'SET NULL'
+    });
+Friend.belongsTo(User,{
+    foreignKey: 'friend_id'
+    });
+
 User.hasMany(Review,{
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
@@ -72,4 +88,4 @@ Category.belongsTo(Genre,{
 
 //export the models with module.exports
 
-module.exports = { Category, Developer, Game,GamePlatform, Genre, Platform, Review, User };
+module.exports = { Category, Developer, Friend, Game, GamePlatform, Genre, Platform, Review, User };

@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 // require the seed files
 const seedCategory = require('./categoryData');
 const seedDeveloper = require('./developerData');
+const seedFriend = require('./friendData');
 const seedGame = require('./gameData');
 const seedGamePlatform = require('./gameplatformData');
 const seedGenre = require('./genreData');
@@ -22,6 +23,7 @@ const seedAll = async () => {
   await seedPlatform();
   await seedGamePlatform();
   await seedReview();
+  await seedFriend();
   process.exit(0);
 };
 
