@@ -25,7 +25,7 @@ await fetch('/reviews', {
                 'Content-Type': 'application/json' 
             },
         });
-        // document.location.replace('/');
+        document.location.replace('/');
     };
 
 document
