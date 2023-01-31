@@ -18,9 +18,14 @@ This is a video game review website deployed to heroku. It is a full stack appli
 - [Collaborators](#collaborators)
 
 ## Installation
+1) npm install
+2) npm run seed
+3) npm run start
+
 
 ## Usage
 
+    You can login to the database, the database will capture your name and read and look up video game reviews. You can add platforms and games. The user can submit to the homepage and see their reviews appear on the homepage.
 ## Website  
 
 [Link to the website]()
@@ -30,6 +35,7 @@ This is a video game review website deployed to heroku. It is a full stack appli
 ![Screenshot]()
 
 ## Testing
+You will use npm run test or node server.js. 
 
 ## License
 
@@ -62,5 +68,5 @@ You can find more of our work at the following links:
 
 - [Phadeline](https://github.com/phadeline)
 - [Ryan](https://github.com/ryancarless96)
-- [Joey]()
+- [Joey](https://github.com/joeyblue27)
 - [Lesley](https://github.com/lesley-byte)
