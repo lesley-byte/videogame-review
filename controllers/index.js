@@ -6,6 +6,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 const categoryRoutes = require('./categoryRoutes');
 const developerRoutes = require('./developerRoutes');
+const friendRoutes = require('./friendRoutes');
 const gameRoutes = require('./gameRoutes');
 
 const genreRoutes = require('./genreRoutes');
@@ -13,9 +14,11 @@ const platformRoutes = require('./platformRoutes');
 const reviewRoutes = require('./reviewRoutes');
 const homeRoutes = require('./homeRoutes');
 
+
 router.use('/api', apiRoutes);
 router.use('/categories', categoryRoutes);
 router.use('/developers', developerRoutes);
+router.use('/friends', friendRoutes);
 router.use('/games', gameRoutes);
 
 router.use('/genres', genreRoutes);

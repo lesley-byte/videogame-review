@@ -3,9 +3,24 @@
  
         <h2 class="card-title">Review title: {{review.review_title}}</h2>
     <ul>
+        <li>Review rating: {{review.review_rating}}</li>
+
+        {{! make stars for the review_rating }}
+        {{#if (eq review.review_rating 1)}}
+            <li>★☆☆☆☆</li>
+        {{else if (eq review.review_rating 2)}}
+            <li>★★☆☆☆</li>
+        {{else if (eq review.review_rating 3)}}
+            <li>★★★☆☆</li>
+        {{else if (eq review.review_rating 4)}}
+            <li>★★★★☆</li>
+        {{else if (eq review.review_rating 5)}}
+            <li>★★★★★</li>
+        {{/if}}
+
         <li>Review text: {{review.review_text}}</li>
-        <li>Review user name: {{review.user.username}}</li>
-        <li>Review game name: {{review.game.game_name}}</li>
-        <li>Date of review: {{review.review_date}}</li>
+        <li>Review user: {{review.user.username}}</li>
+        <li>Review game: {{review.game.game_name}}</li>
+        <li>Date of review: {{format_date review.review_date}}</li>
     </ul>
 </section>

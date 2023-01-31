@@ -13,6 +13,11 @@ Review.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        review_rating: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            // defaultValue: 0,
+        },
         review_title: {
             type: DataTypes.STRING,
             allowNull: false,

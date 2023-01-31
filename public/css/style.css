@@ -157,7 +157,24 @@ li {
   text-align: left;
 }
 
-/* media queries to make grass smaller for mobile phones */
+
+
+
+.radio-star:checked~label,
+.radio-star:not(:checked)~label:hover~label,
+.fa-star:hover~input:not(checked)~label~label {
+  color: #fd4;
+}
+
+
+.rating-container {
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:center;
+}
+.radio-star[type="radio"] {
+  display:none;
+}
 
 @media only screen and (max-width: 800px) {
 }
