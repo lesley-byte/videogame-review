@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 //try to put secret in .env file
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.DB_SECRET,
   cookie: {
     maxAge: 60 * 60 * 1000,
     httpOnly: true,
