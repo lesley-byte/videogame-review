@@ -5,20 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/jass.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
 />
     <link rel="stylesheet" type="text/css" href="/css/style.css">
  
 </head>
 
-<body class="bg-dark hidden">
+<body class="bg-primary-subtle">
     <header class="sticky-top">
-                <nav class="navbar text-white-50 bg-dark shadow-lg d-flex flex-wrap flex-row">
+                <nav class="navbar text-blue-50 bg-primary-subtle d-flex flex-wrap flex-row">
             <div class=" d-flex flex-row flex-wrap">
-                <span class="navbar-brand m-3 h1 d-flex flex-row flex-wrap fs-1 text-white-50 bg-dark"> <svg
+                <span class="navbar-brand m-3 h1 d-flex flex-row flex-wrap fs-1 bg-primary-subtle"> <svg
                         xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                         class="bi bi-flower1 mx-2" viewBox="0 0 16 16">
                         <path
@@ -27,30 +25,30 @@
             </div>
         </nav>
     </header>
-    <nav class="bg-dark">
-        <a href="/">Home</a>
+    <nav class="bg-primary-subtle">
+        <a class="" href="/">Home</a>
         {{#if loggedIn}}
-        <button id="logout" class="btn-no-style ">Logout</button>
+        <button id="logout" class="btn-primary ">Logout</button>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
     </nav>
-    <main class="d-flex text-white-50 bg-dark shadow-lg text-center p-2 m-2 rounded">
-        <aside class="bg-dark">
+    <main class="d-flex text-blue-50 bg-primary-subtle text-center p-2 m-2">
+        <aside class="bg-primary-subtle m-3 p-3 shadow-lg border border-3 border-secondary">
             <h2 class="swoosh">Hello {{username}}</h2>
-            <p>Browse by terms:</p>
+            <p class="fs-3" style="text-decoration:underline">Browse by terms:</p>
             <ul>
-                <li><a href="/games">Write a Review</a></li>
-                <li><a href="/categories">Categories</a></li>
-                <li><a href="/developers">Developers</a></li>
-                <li><a href="/games">Games</a></li>
-                <li><a href="/genres">Genres</a></li>
-                <li><a href="/platforms">Platforms</a></li>
-                <li><a href="/reviews">Reviews</a></li>
-                <li><a href="/friends">Friends</a></li>
+                <li class="fs-4 mb-3"><a href="/games">Write a Review</a></li>
+                <li class="fs-4 mb-3"><a href="/categories">Categories</a></li>
+                <li class="fs-4 mb-3"><a href="/developers">Developers</a></li>
+                <li class="fs-4 mb-3"><a href="/games">Games</a></li>
+                <li class="fs-4 mb-3"><a href="/genres">Genres</a></li>
+                <li class="fs-4 mb-3"><a href="/platforms">Platforms</a></li>
+                <li class="fs-4 mb-3"><a href="/reviews">Reviews</a></li>
+                <li class="fs-4 mb-3"><a href="/friends">Friends</a></li>
             </ul>
         </aside>
-        <div class="bg-dark card">
+        <div class=" bg-primary-subtle p-3 m-3">
             {{{body}}}
         </div>
     </main>
