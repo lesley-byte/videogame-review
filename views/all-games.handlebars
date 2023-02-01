@@ -7,14 +7,14 @@
       {{#each games as |game|}}
         <li>Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
         <li style='font-size: 12px;'>Game category:
-          {{game.category.category_name}}</li>
+          <a href='./categories/{{game.category.id}}'>{{game.category.category_name}}</a></li>
         <br />
       {{/each}}
     </ul>
   </div>
   <div class='col'>
     <h3>Don't see your game here?</h3>
-    <button  class="btn-primary" id='addbutton'>Add a Game</button><br /><br />
+    <button  class="btn-primary btn" id='addbutton'>Add a Game</button><br /><br />
 
     <form id='add-game-form'>
       <label>Game Name:</label><br />

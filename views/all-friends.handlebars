@@ -2,12 +2,13 @@
     <h2 class="card-title">Friends</h2>
     <ul>
         {{#each friends as |friend|}}
-               <a href="./friends/{{friend.user_id}}"> <li>{{friend.user.username}}</li></a>
+               <a href="./friends/{{friend.user.id}}"> <li>{{friend.user.username}}</li></a>
         {{log friend}}
         {{/each}}
         </br>
+    </ul>
         <h3>Add a friend?</h3>
-        <form id ='add-friend-form'>
+<form id ='add-friend-form'>
             <Label>Username</Label></br>
             <select id="myFriend">
                 {{#each users as |user|}}
@@ -15,9 +16,8 @@
                 {{/each}}
             </select>
             </br>
-            <button type="submit" class="btn-primary" id="add-friend" class="btn btn-primary">Add Friend</button>
+            <button type="submit" class="btn btn-primary" id="add-friend" class="btn btn-primary">Add Friend</button>
         </form>
-    </ul>
 </section>
 
 <script src="/js/addfriend.js"></script>

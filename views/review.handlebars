@@ -20,7 +20,7 @@
 
         <li>Review text: {{review.review_text}}</li>
         <li>Review user: {{review.user.username}}</li>
-        <li>Review game: {{review.game.game_name}}</li>
+        <li>Review game: <a href='../games/{{review.game_id}}'> {{review.game.game_name}}</a></li>
         <li>Date of review: {{format_date review.review_date}}</li>
     </ul>
 </section>

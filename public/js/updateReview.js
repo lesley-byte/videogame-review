@@ -8,6 +8,9 @@ const newReviewFormHandler = async (event) => {
   const text = document.querySelector('#newreview').value;
   // const reviewUser = document.querySelector('#review_user').value.trim();
   // const reviewGame = document.querySelector('#gamename').value.trim();
+  console.log(review_rating);
+  console.log(title);
+  console.log(text);
 console.log(review_rating);
   await fetch(`/reviews/${id}`, {
     method: 'PUT',

@@ -4,7 +4,7 @@
 
 {{#each categories as |category|}}
     <ul>
-        <li>Category name: {{category.category_name}}</li>
+        <li>Category name: <a href='../categories/{{category.id}}'>{{category.category_name}}</a></li>
     </ul>
 {{/each}}
 

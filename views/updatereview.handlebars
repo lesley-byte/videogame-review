@@ -23,13 +23,20 @@
   <input type="radio" class="radio-star" name="rate" id="rate-1" value="1">
   <label for="rate-1" class="fa-solid fa-star"></label>
 </div>
-
-   <input type="hidden" name="review-id" value="{{review.id}}" />
-  <label>New Review Title:</label><br>
-  <input type="text" id="title" value="review title"><br>
-  <label for="review">New Review:</label><br>
-  <input type="text" id="newreview" value="review text"><br><br>
-   <button type="submit" class="btn-primary ">Update</button>
+ 
+  <input type="hidden" name="review-id" value="{{review.id}}" />
+  
+  <div class="input-group m-2 p-2">
+  <label class="m-2 p-2">New Review Title:</label><br>
+  <input type="text" id="title" class="form-control" placeholder="Type review title here"><br>
+  </div>
+  
+  <div class="input-group m-2 p-2" style="height: 300px">
+  <label for="review" class="m-2 p-2">New Review:</label><br>
+  <input type="text" id="newreview"  class="form-control" placeholder="Type review here" aria-label="With textarea"><br><br>
+  </div>
+  
+   <button type="submit" class="btn-primary btn">Update</button>
 </form>
 </section>
 

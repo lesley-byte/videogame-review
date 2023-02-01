@@ -5,7 +5,7 @@
 
     {{#each games as |game|}}
     <ul>
-        <li>Game name: {{game.game_name}}</li>
+        <li>Game name: <a href='../games/{{game.id}}'>{{game.game_name}}</a></li>
     </ul>
     {{/each}}
 

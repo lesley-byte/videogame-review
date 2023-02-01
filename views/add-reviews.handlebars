@@ -21,16 +21,20 @@
   <input type="radio" class="radio-star" name="rate" id="rate-1" value="1">
   <label for="rate-1" class="fa-solid fa-star"></label>
 </div>
+        <div class="input-group m-2 p-2">
+        <label for="review_title" class="m-2 p-2">Review Title</label>
+        <input type="text" name="review_title" class="form-control" placeholder="Type review title here" id="review_title">
+        </div>
 
-        <label for="review_title">Review Title</label>
-        <input type="text" name="review_title" id="review_title">
-        <label for="review_text">Review Text</label>
-        <input type="text" name="review_text" id="review_text">
+        <div class="input-group m-2 p-2" style="height: 300px">
+        <label for="review_text" class="m-2 p-2">Review Text</label>
+        <textarea type="text" name="review_text" class="form-control" placeholder="Type review here" id="review_text" aria-label="With textarea"></textarea>
+        </div>
         
         <!-- default value is the game name -->
         <input type="hidden" name="review_game_id" id="review_game_id" value="{{game.id}}"/>
 
-        <button class="btn-primary" type="submit">Submit</button>
+        <button class="btn-primary btn" type="submit">Submit</button>
     </form>
 </section>
 

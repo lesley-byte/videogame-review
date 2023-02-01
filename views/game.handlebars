@@ -3,13 +3,14 @@
     <h2 class="card-title">Game name: {{game.game_name}}</h2>
     
     
-    <p>Game developer: {{game.developer.developer_name}}</p>
-    <p>Game category: {{game.category.category_name}}</p>
+    <p>Game developer: <a href='../developers/{{game.developer_id}}'>{{game.developer.developer_name}}</a></p>
+    <p>Game category: <a href='../categories/{{game.category_id}}'> {{game.category.category_name}}</a></p>
 
     <p> Available Game platforms: </p>
     <ul>
     {{#each gamePlatforms as |gamePlatform|}}
-        <li>{{gamePlatform.platform.platform_name}}</li>
+
+        <li><a href='../platforms/{{gamePlatform.platform_id}}'>{{gamePlatform.platform.platform_name}}</a></li>
     {{/each}}
     </ul>
 
@@ -27,13 +28,14 @@
     <button type="submit" id="add-platform" class="btn btn-primary">Add Platform</button>
 </form>
 
-    <a href="../reviews/add/{{game.id}}">Add a review</a>
+    <a href="../reviews/add/{{game.id}}" class="btn btn-primary m-2">Add a review</a>
   <h3>Reviews: </h3>
 
 
     <ul>
     {{#each reviews as |review|}}
-        <li>Review title: {{review.review_title}}</li>
+    {{log review}}
+        <li>Review title: <a href='../reviews/{{review.id}}'>{{review.review_title}}</a></li>
     {{/each}}
     </ul>
 </section>
