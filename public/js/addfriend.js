@@ -1,4 +1,5 @@
 console.log('addfriend.js loaded');
+
 const newFriendHandler = async (event) => {
     event.preventDefault();
     console.log('new friend form submitted!');

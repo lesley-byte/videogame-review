@@ -2,11 +2,12 @@
   <h2 class='card-title'> All Categories</h2>
   <ul>
     {{#each categories as |category|}}
+    {{log category}}
       <li>Category:
         <a
           href='./categories/{{category.id}}'
         >{{category.category_name}}</a></li>
-      <li style='font-size: 12px;'>in genre: {{category.genre.genre_name}}</li>
+      <li style='font-size: 12px;'>in genre: <a href="./genres/{{category.genre_id}}">{{category.genre.genre_name}}</a></li>
       <br />
     {{/each}}
 

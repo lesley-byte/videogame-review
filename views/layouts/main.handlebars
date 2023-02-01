@@ -12,9 +12,9 @@
  
 </head>
 
-<body class="bg-primary-subtle">
+<body class="bg-primary-subtle m-3">
     <header class="sticky-top">
-                <nav class="navbar text-blue-50 bg-primary-subtle d-flex flex-wrap flex-row">
+                <nav class="navbar text-blue-50 bg-primary-subtle d-flex flex-wrap flex-row m-3">
             <div class=" d-flex flex-row flex-wrap">
                 <span class="navbar-brand m-3 h1 d-flex flex-row flex-wrap fs-1 bg-primary-subtle"> <svg
                         xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
@@ -26,11 +26,11 @@
         </nav>
     </header>
     <nav class="bg-primary-subtle">
-        <a class="" href="/">Home</a>
+        <a class="btn btn-primary" href="/">Home</a>
         {{#if loggedIn}}
-        <button id="logout" class="btn-primary ">Logout</button>
+        <button id="logout" class="btn-primary btn ">Logout</button>
         {{else}}
-        <a href="/login">Login</a>
+        <a class="btn btn-primary" href="/login">Login</a>
         {{/if}}
     </nav>
     <main class="d-flex text-blue-50 bg-primary-subtle text-center p-2 m-2">

@@ -2,7 +2,7 @@
 <section>
     <h2 class="card-title">Games for platform:{{platform.platform_name}}</h2>
     {{#each gameplatforms as |gameplatform|}}
-        <p>{{gameplatform.game.game_name}}</p>
+        <p><a href='../games/{{gameplatform.game_id}}'>{{gameplatform.game.game_name}}</a></p>
     {{/each}}
     
 </section>

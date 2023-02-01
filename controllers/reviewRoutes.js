@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
         },
         {
           model: Game,
-          attributes: ['game_name'],
+          attributes: ['game_name', 'id']
         },
       ],
     })
@@ -233,7 +233,7 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.update(
       {
-        review_rating: req.body.rating,
+        review_rating: req.body.review_rating,
         review_text: req.body.text,
         review_title: req.body.title,
       },

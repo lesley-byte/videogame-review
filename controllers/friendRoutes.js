@@ -52,8 +52,14 @@ router.get('/:id', withAuth, async (req, res) => {
   try {
     const dbFriendData = await Friend.findOne({
       where: {
-        user_id: req.params.id,
+        friend_id: req.params.id,
       },
+      include: [
+        {
+          model: User,
+          
+        }
+      ]
     });
 
     const friend = dbFriendData.get({ plain: true });
@@ -74,6 +80,8 @@ router.get('/:id', withAuth, async (req, res) => {
       friend,
       reviews,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.userId,
+      username: req.session.username,
     });
   } catch (err) {
     console.log(err);
