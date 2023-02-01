@@ -1,10 +1,8 @@
-<section class="card-title"> 
-    This is my list of reviews: 
-    {{#each reviews as |review|}}
-    <a href="/reviews/update/{{review.id}}">
+<section class=" fs-2"> 
+    <h2 class="">This is my list of reviews: </h2>
 
-    <p> Review Title: {{review.review_title}} </p>
-    </a>
-    <a href="/reviews/delete/{{review.id}}">Delete {{review.review_title}}?</a>
+    {{#each reviews as |review|}}
+  <span class="fs-4">Review Title:</span><a class="fs-4" href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>
+    <p><a class="fs-5 text-danger" href="/reviews/delete/{{review.id}}">Delete {{review.review_title}}?</a></p>
     {{/each}}
 </section>
