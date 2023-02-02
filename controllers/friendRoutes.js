@@ -57,9 +57,8 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          
-        }
-      ]
+        },
+      ],
     });
 
     const friend = dbFriendData.get({ plain: true });
@@ -95,7 +94,7 @@ router.post('/', withAuth, async (req, res) => {
     const dbFriendData = await Friend.create({
       user_id: req.session.userId,
       friend_id: req.body.friend_id,
-    }).catch ((err) => {
+    }).catch((err) => {
       res.json(err);
       return;
     });
@@ -114,7 +113,11 @@ router.delete('/:id', withAuth, async (req, res) => {
       where: {
         id: req.params.id,
       },
+    }).catch((err) => {
+      res.json(err);
+      return;
     });
+
     if (!dbFriendData) {
       res.status(404).json({ message: 'No friend found with this id' });
       return;
