@@ -1,7 +1,6 @@
 <section class=" fs-2"> 
     <h2 class="fs-2">This is my list of reviews: </h2>
 <div class="card-container">
-
     {{#each reviews as |review|}}
         <div class="card m-2 border border-primary">
   <a class="fs-3 card-header text-primary" href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>

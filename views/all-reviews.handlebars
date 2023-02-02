@@ -1,12 +1,12 @@
 <section>
     <h2 class=""> All reviews </h2>
-    <div class="card-container"
-    <div class="card m-2 border border-primary">
+   
+    <div class="card-container">
     {{#each reviews as |review|}}
     <div class="card m-2 border border-primary">
-    <ul>
         <li class="card-header fs-4"><a href="./reviews/{{review.id}}"> "{{review.review_title}}" </a></li>
         {{!-- <li>Review: {{review.review_text}}</li> --}}
+    <ul>
         
 <span class="badge bg-primary-subtle border border-primary  text-primary fs-6 m-2 rounded-pill ">
         {{! make stars for the review_rating }}
