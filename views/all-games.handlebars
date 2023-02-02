@@ -5,9 +5,9 @@
     <ul>
       {{! will show the games }}
       {{#each games as |game|}}
-        <li>Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
-        <li style='font-size: 12px;'>Game category:
-          <a href='./categories/{{game.category.id}}'>{{game.category.category_name}}</a></li>
+        <li class="fs-5">Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
+        <li class"fs-6">In category:
+          <a href='./categories/{{game.category.id}}'><span class="badge bg-light text-black fs-6 m-2 rounded-pill ">{{game.category.category_name}}</span></a></li>
         <br />
       {{/each}}
     </ul>
@@ -41,7 +41,7 @@
       {{! <input type='text' id='developer' value='name of developer' /><br /><br /> }}
       <label>Year Created:</label><br />
       <input type='text' id='date' placeholder='yyyy' /><br /><br />
-      <button type='submit' class='btn-primary'>Submit</button>
+      <button type='submit' class='btn btn-primary'>Submit</button>
     </form>
   </div>
 </div>

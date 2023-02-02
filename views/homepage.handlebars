@@ -1,8 +1,18 @@
 <section class=" fs-2"> 
-    <h2 class="">This is my list of reviews: </h2>
+    <h2 class="fs-2">This is my list of reviews: </h2>
+<div class="card-container">
 
     {{#each reviews as |review|}}
-  <span class="fs-4">Review Title:</span><a class="fs-4" href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>
-    <p><a class="fs-5 text-danger" href="/reviews/delete/{{review.id}}">Delete {{review.review_title}}?</a></p>
+        <div class="card m-2 border border-primary">
+  <a class="fs-3 card-header text-primary" href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>
+  <figure>
+  <blockquote class="fs-4">"{{review.review_text}}"</blockquote>
+  <figcaption class="blockquote-footer">{{format_date review.review_date}}
+    </figcaption>
+  </figure>
+    <p><a class="fs-6 btn btn-danger" href="/reviews/delete/{{review.id}}">Delete this review?</a></p>
+    </div>  
+    
     {{/each}}
+</div>
 </section>

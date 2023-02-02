@@ -2,7 +2,7 @@
     <h2 class="card-title">All Genres</h2>
     <ul>
         {{#each genres as |genre|}}
-        <li>Genre name: <a href="./genres/{{genre.id}}">{{genre.genre_name}}</a></li>
+        <li><a href="./genres/{{genre.id}}"><span class="badge bg-light text-black fs-6 m-2 rounded-pill ">{{genre.genre_name}}</span></a></li>
     
         {{/each}}
 </section>

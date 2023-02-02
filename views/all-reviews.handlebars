@@ -1,12 +1,14 @@
 <section>
-    <h2 class="card-title"> All reviews </h2>
+    <h2 class=""> All reviews </h2>
+    <div class="card-container"
+    <div class="card m-2 border border-primary">
     {{#each reviews as |review|}}
+    <div class="card m-2 border border-primary">
     <ul>
-        <li class="card-header">Review title: <a href="./reviews/{{review.id}}"> {{review.review_title}} </a></li>
+        <li class="card-header fs-4"><a href="./reviews/{{review.id}}"> "{{review.review_title}}" </a></li>
         {{!-- <li>Review: {{review.review_text}}</li> --}}
         
-        <li>Rating: {{review.review_rating}}</li>
-
+<span class="badge bg-primary-subtle border border-primary  text-primary fs-6 m-2 rounded-pill ">
         {{! make stars for the review_rating }}
         {{#if (eq review.review_rating 1)}}
             <li>★☆☆☆☆</li>
@@ -19,13 +21,16 @@
         {{else if (eq review.review_rating 5)}}
             <li>★★★★★</li>
         {{/if}}
+</span>
         <li>For:<a href="./games/{{review.game.id}}"> {{review.game.game_name}}</a> </li>
         {{log review.game}}
         <li>by: {{review.user.username}}</li>
         <li>On: {{format_date review.review_date}}</li>
     </ul>  
         
+    </div>
     {{/each}}
+    </div>
     
 
 </section>

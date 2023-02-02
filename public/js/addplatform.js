@@ -15,7 +15,7 @@ const newPlatformHandler = async (event) => {
       'Content-Type': 'application/json',
     },
   });
-  document.location.replace(`/games`);
+  document.location.replace(`/games/${game_id}`);
   console.log('new platform form submitted!');
 };
 
