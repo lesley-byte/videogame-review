@@ -3,7 +3,7 @@
 <div class="card-container">
     {{#each reviews as |review|}}
         <div class="card m-2 border border-primary">
-  <a class="fs-3 card-header text-primary" href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>
+  <a class="fs-3 card-header text-primary  bg-primary-subtle " href="/reviews/update/{{review.id}}"> {{review.review_title}} </a>
   <figure>
   <blockquote class="fs-4">"{{review.review_text}}"</blockquote>
   <figcaption class="blockquote-footer">{{format_date review.review_date}}
