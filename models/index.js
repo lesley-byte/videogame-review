@@ -1,15 +1,15 @@
 //all the relationships between the tables/models
 
 // TODO require the rest of the models in the models folder
-const Category = require('./Category');
-const Developer = require('./Developer');
-const Friend = require('./Friend');
-const Game = require('./Game');
-const GamePlatform = require('./GamePlatform');
-const Genre = require('./Genre');
-const Platform = require('./Platform');
-const Review = require('./Review');
-const User = require('./User');
+const Category = require('./category');
+const Developer = require('./developer');
+const Friend = require('./friend');
+const Game = require('./game');
+const GamePlatform = require('./gameplatform');
+const Genre = require('./genre');
+const Platform = require('./platform');
+const Review = require('./review');
+const User = require('./user');
 
 // TODO: indicate the relationship between the models... hasMany, belongsTo, etc. as well as the foreign key
 // this part is broken....eeek 🔥🔥🔥🔥🗑️
