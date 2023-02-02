@@ -7,7 +7,7 @@
         <a
           href='./categories/{{category.id}}'
         >{{category.category_name}}</a></li>
-      <li style='font-size: 12px;'>in genre: <a href="./genres/{{category.genre_id}}">{{category.genre.genre_name}}</a></li>
+      <li class="fs-6">Genre: <a href="./genres/{{category.genre_id}}"><span class="badge text-bg-light rounded-pill ">{{category.genre.genre_name}}</badge></a></li>
       <br />
     {{/each}}
 

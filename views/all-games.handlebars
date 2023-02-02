@@ -5,9 +5,9 @@
     <ul>
       {{! will show the games }}
       {{#each games as |game|}}
-        <li>Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
-        <li style='font-size: 12px;'>Game category:
-          <a href='./categories/{{game.category.id}}'>{{game.category.category_name}}</a></li>
+        <li class="fs-5">Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
+        <li class"fs-6">In category:
+          <a href='./categories/{{game.category.id}}'><span class="badge bg-light text-black fs-6 m-2 rounded-pill ">{{game.category.category_name}}</span></a></li>
         <br />
       {{/each}}
     </ul>
@@ -17,9 +17,10 @@
     <button  class="btn-primary btn" id='addbutton'>Add a Game</button><br /><br />
 
     <form id='add-game-form'>
-      <label>Game Name:</label><br />
-      <input type='text' id='new-game' placeholder='Name of Game' /><br /><br />
-      <label>Category:</label><br />
+      <div class="form-group">
+      <label class="form-label text-start">Game Name:</label><br />
+      <input type='text' id='new-game' placeholder='Name of Game' class="form-input m-2 form-control"/><br /><br />
+      <label class="form-label text-start">Category:</label><br />
 
       <select id='myCategories'>
         {{log categories}}
@@ -31,7 +32,7 @@
       <br />
 
       {{! <input type='text' id='gamecategory' value='category' /><br /> }}
-      <label>Developer:</label><br />
+      <label class="form-label text-start">Developer:</label><br />
       <select id='myDevelopers'>
         {{#each developers as |developer|}}
           <option value='{{developer.id}}'>{{developer.developer_name}}</option>
@@ -39,9 +40,10 @@
       </select>
       <br />
       {{! <input type='text' id='developer' value='name of developer' /><br /><br /> }}
-      <label>Year Created:</label><br />
-      <input type='text' id='date' placeholder='yyyy' /><br /><br />
-      <button type='submit' class='btn-primary'>Submit</button>
+      <label class="form-label text-start">Year Created:</label><br />
+      <input type='text' id='date' placeholder='yyyy' class="form-input m-2 form-control"/><br /><br />
+      <button type='submit' class='btn btn-primary'>Submit</button>
+      </div>
     </form>
   </div>
 </div>

@@ -1,11 +1,11 @@
 {{!-- will show categories --}}
 <section>
     <h2 class="card-title">Category name: {{category.category_name}}</h2>
-    <p>Category genre: {{category.genre.genre_name}}</p>
+    <p>Category genre: <a href='../genres/{{category.genre_id}}'>{{category.genre.genre_name}}</a></p>
 
-
+{{log category}}
     {{#each games as |game|}}
-    {{log game}}
+
     <ul>
         <li>Game name: <a href='../games/{{game.id}}'>{{game.game_name}}</a></li>
     </ul>

@@ -6,9 +6,9 @@ const deleteFriendFormHandler = async (event) => {
   await fetch(`/friends/${id}`, {
     method: 'DELETE',
   });
-  document.location.replace('/');
+  document.location.replace('/friends');
 };
 
 document
-    .querySelector('#delete-btn')
-    .addEventListener('click', deleteFriendFormHandler);
+  .querySelector('#delete-btn')
+  .addEventListener('click', deleteFriendFormHandler);

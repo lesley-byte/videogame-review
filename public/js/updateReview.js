@@ -3,7 +3,9 @@ const id = document.querySelector('input[name="review-id"]').value;
 const newReviewFormHandler = async (event) => {
   event.preventDefault();
   // get the values from the form
-  const review_rating = document.querySelector('input[name="rate"]:checked').value;
+  const review_rating = document.querySelector(
+    'input[name="rate"]:checked'
+  ).value;
   const title = document.querySelector('#title').value;
   const text = document.querySelector('#newreview').value;
   // const reviewUser = document.querySelector('#review_user').value.trim();
@@ -11,7 +13,7 @@ const newReviewFormHandler = async (event) => {
   console.log(review_rating);
   console.log(title);
   console.log(text);
-console.log(review_rating);
+  console.log(review_rating);
   await fetch(`/reviews/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
@@ -23,7 +25,7 @@ console.log(review_rating);
       'Content-Type': 'application/json',
     },
   });
-  document.location.replace('/');
+  document.location.replace(`/reviews/${id}`);
 };
 
 document
