@@ -152,6 +152,19 @@ const gameData = [
     category_id: 5,
     date: '1987-8-9',
   },
+  {
+    game_name: 'Ninja Gaiden',
+    developer_id: 22,
+    category_id: 5,
+    date: '1989-5-9',
+  },
+  {
+    game_name: 'Tecmo Bowl',
+    developer_id: 22,
+    category_id: 5,
+    date: '1989-3-5',
+  },
+
 
 
 ];
