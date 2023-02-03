@@ -218,6 +218,24 @@ const gameData = [
     category_id: 5,
     date: '1987-4-2',
   },
+  {
+    game_name: 'Sonic the Hedgehog',
+    developer_id: 10,
+    category_id: 5,
+    date: '1991-6-23',
+  },
+  {
+  game_name: 'Sonic the Hedgehog 2',
+  developer_id: 10,
+  category_id: 5,
+  date: '1993-2-5',
+},
+{
+game_name: 'Sonic the Hedgehog 3',
+developer_id: 10,
+category_id: 5,
+date: '1994-6-22',
+},
 
 
 
