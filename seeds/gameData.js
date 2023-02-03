@@ -164,6 +164,18 @@ const gameData = [
     category_id: 5,
     date: '1989-3-5',
   },
+  {
+    game_name: 'Contra',
+    developer_id: 8,
+    category_id: 5,
+    date: '1986-5-8',
+  },
+  {
+    game_name: 'LifeForce',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
 
 
 
