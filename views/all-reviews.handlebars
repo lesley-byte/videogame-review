@@ -1,7 +1,7 @@
 <section>
     <h2 class=""> All reviews </h2>
    
-    <div class="card-container col-sm-6 mb-3 mb-sm-0 d-inline-flex flex-wrap">
+    <div class="card-container col-sm-6 mb-3 mb-sm-0 d-inline-flex flex-wrap" style="width: 90%">
     {{#each reviews as |review|}}
     <div class="card m-2 border border-primary" style="width: 25rem;">
         <li class="card-header bg-primary-subtle fs-4"><a href="./reviews/{{review.id}}" class=" bg-primary-subtle "> "{{review.review_title}}" </a></li>
