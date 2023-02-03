@@ -127,7 +127,147 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2004-11-9',
-  }
+  },
+  {
+    game_name: 'Castlevania',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-9-17',
+  },
+  {
+    game_name: 'Castlevania 2 Simons Quest',
+    developer_id: 8,
+    category_id: 5,
+    date: '1989-4-19',
+  },
+  {
+    game_name: 'Castlevania 3',
+    developer_id: 8,
+    category_id: 5,
+    date: '1991-8-16',
+  },
+  {
+    game_name: 'Metroid',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-7-26',
+  },
+  {
+    game_name: 'Zelda',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-3-15',
+  },
+  {
+    game_name: 'Mike Tysons Punch-Out!!',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-8-9',
+  },
+  {
+    game_name: 'Ninja Gaiden',
+    developer_id: 22,
+    category_id: 5,
+    date: '1989-5-9',
+  },
+  {
+    game_name: 'Tecmo Bowl',
+    developer_id: 22,
+    category_id: 5,
+    date: '1989-3-5',
+  },
+  {
+    game_name: 'Contra',
+    developer_id: 8,
+    category_id: 5,
+    date: '1986-5-8',
+  },
+  {
+    game_name: 'LifeForce',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
+    game_name: 'MegaMan',
+    developer_id: 6,
+    category_id: 5,
+    date: '1987-4-17',
+  },
+  {
+    game_name: 'MegaMan 2',
+    developer_id: 6,
+    category_id: 5,
+    date: '1988-2-15',
+  },
+  {
+    game_name: 'MegaMan 3',
+    developer_id: 6,
+    category_id: 5,
+    date: '1990-3-12',
+  },
+  {
+    game_name: 'MegaMan 4',
+    developer_id: 6,
+    category_id: 5,
+    date: '1992-8-2',
+  },
+  {
+    game_name: 'MegaMan 5',
+    developer_id: 6,
+    category_id: 5,
+    date: '1993-3-19',
+  },
+  {
+    game_name: 'MegaMan 6',
+    developer_id: 6,
+    category_id: 5,
+    date: '1994-2-14',
+  },
+  {
+    game_name: 'Little Nemo The Dream Master',
+    developer_id: 6,
+    category_id: 5,
+    date: '1990-9-17',
+  },
+  {
+    game_name: 'NHL Hockey 94',
+    developer_id: 7,
+    category_id: 4,
+    date: '1993-3-19',
+  },
+  {
+    game_name: 'NHL Hockey 95',
+    developer_id: 7,
+    category_id: 4,
+    date: '1993-3-19',
+  },
+  {
+    game_name: 'Bayou Billy',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
+    game_name: 'Sonic the Hedgehog',
+    developer_id: 10,
+    category_id: 5,
+    date: '1991-6-23',
+  },
+  {
+  game_name: 'Sonic the Hedgehog 2',
+  developer_id: 10,
+  category_id: 5,
+  date: '1993-2-5',
+},
+{
+game_name: 'Sonic the Hedgehog 3',
+developer_id: 10,
+category_id: 5,
+date: '1994-6-22',
+},
+
+
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);

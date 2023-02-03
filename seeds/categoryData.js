@@ -16,7 +16,7 @@ const categoryData = [
         genre_id: 1,
     },
     {
-        category_name: 'Hack & Slash',
+        category_name: 'Sports',
         genre_id: 1,
     },
     {
@@ -140,7 +140,7 @@ const categoryData = [
         genre_id: 8,
     },
     {
-        category_name: 'All Sports',
+        category_name: 'Hack & Slash',
         genre_id: 9,
     },
     {
