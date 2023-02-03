@@ -29,11 +29,15 @@ This is a video game review website deployed to heroku. It is a full stack appli
     
 ## Website  
 
-[Link to the website]()
+[Link to the website](https://safe-eyrie-62856.herokuapp.com/login)
+
+## Presentation
+[Link to presenation](https://docs.google.com/presentation/d/1tYqmVuhQ94IKvixlw7p23zWb6ti1AvtPX-Ex9ajIEjs/edit#slide=id.g2038c71a101_0_15)
 
 ## Screenshot
 
-![Screenshot]()
+![Screenshot](./Assets/Web%20capture_2-2-2023_184710_safe-eyrie-62856.herokuapp.com.jpeg)
+
 
 ## Testing
 You will use npm run test or node server.js. 
