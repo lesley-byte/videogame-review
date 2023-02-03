@@ -1,15 +1,15 @@
 <section>
-  <h2 class='card-title'> All Categories</h2>
-  <ul>
-    {{#each categories as |category|}}
-    {{log category}}
-      <li class="fs-5">Category:
-        <a
-          href='./categories/{{category.id}}'
-        >{{category.category_name}}</a></li>
-      <li class="fs-6">Genre: <a href="./genres/{{category.genre_id}}"><span class="badge text-bg-light rounded-pill">{{category.genre.genre_name}}</badge></a></li>
-      <br />
-    {{/each}}
+  <h2> All Categories and their genres</h2>
 
-  </ul>
+    {{#each categories as |category|}}
+     <div class="my-3 d-inline-flex col" style="width: 20rem;">
+      <div class="d-inline-flex row" style="width: 20rem;">
+      <div class=" bg-primary-subtle text-light m-2 fs-4"><a href='./categories/{{category.id}}'>{{category.category_name}}</a></div>
+      <div class=" fs-6">In: <a href="./genres/{{category.genre_id}}"><span class="badge text-bg-light rounded-pill">{{category.genre.genre_name}}</badge></a></div>
+      </div>
+      </div>
+    {{/each}}
+      </div>
+ 
+
 </section>
