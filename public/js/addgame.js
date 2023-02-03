@@ -1,22 +1,4 @@
-// var myCategories = {
-//   val1: 'Arcade & Rhythm',
-//   val2: 'Fighgting & Martial Arts',
-// };
 
-// var myDevelopers = {
-//   val1: 'Activision',
-//   val2: 'Avalanche Software',
-// };
-
-// var mySelect = $('#myCategories');
-// $.each(myCategories, function (val, text) {
-//   mySelect.append($('<option></option>').val(val).html(text));
-// });
-
-// var myChoices = $('#myDevelopers');
-// $.each(myDevelopers, function (val, text) {
-//   myChoices.append($('<option></option>').val(val).html(text));
-// });
 
 function showaddgame() {
   let showInputs = document.querySelector('#add-game-form');
@@ -31,7 +13,7 @@ const newGameFormHandler = async (event) => {
   const category_id = document.querySelector('#myCategories').value;
   const date = document.querySelector('#date').value;
 
-  await fetch(`/games`, {
+  await fetch(`/api/games`, {
     method: 'POST',
     body: JSON.stringify({
       game_name,

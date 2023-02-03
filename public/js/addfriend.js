@@ -6,7 +6,7 @@ const newFriendHandler = async (event) => {
   const friend_id = document.querySelector('#myFriend').value;
   // const user_id = document.querySelector('#user_id').value;
 
-  await fetch('/friends', {
+  await fetch('/api/friends', {
     method: 'POST',
     body: JSON.stringify({
       friend_id,

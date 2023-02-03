@@ -14,7 +14,7 @@ const newReviewFormHandler = async (event) => {
   console.log(title);
   console.log(text);
   console.log(review_rating);
-  await fetch(`/reviews/${id}`, {
+  await fetch(`/api/reviews/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
       review_rating,

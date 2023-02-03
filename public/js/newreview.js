@@ -13,7 +13,7 @@ const newReviewFormHandler = async (event) => {
   // const reviewUser = document.querySelector('#user').value;
   const game_id = document.querySelector('#review_game_id').value;
   console.log('review rating: ' + review_rating);
-  await fetch('/reviews', {
+  await fetch('/api/reviews', {
     method: 'POST',
     body: JSON.stringify({
       review_rating,
