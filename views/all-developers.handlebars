@@ -1,9 +1,11 @@
 <section>
     <h2 class="card-title"> All Developers</h2>
-    <ul>
         {{#each developers as |developer|}}
-        <li><a href="./developers/{{developer.id}}"><span class="badge bg-info-subtle text-black m-2  rounded-pill fs-5">{{developer.developer_name}}</span></a></li>
-        
+            <div class="d-inline-flex col" style="width: 25rem;">
+                <div class="d-inline-flex row" style="width: 20rem;">
+                    <a href="./developers/{{developer.id}}"><span class="badge bg-light text-black m-2  rounded-pill fs-5">{{developer.developer_name}}</span></a>
+                </div>
         {{!-- <li>Developer id number: {{developer.developer_id}}</li> --}}
+            </div>
         {{/each}}
 </section>
