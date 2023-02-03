@@ -135,6 +135,18 @@ const gameData = [
     date: '1987-9-17',
   },
   {
+    game_name: 'Castlevania 2 Simons Quest',
+    developer_id: 8,
+    category_id: 5,
+    date: '1989-4-19',
+  },
+  {
+    game_name: 'Castlevania 3',
+    developer_id: 8,
+    category_id: 5,
+    date: '1991-8-16',
+  },
+  {
     game_name: 'Metroid',
     developer_id: 9,
     category_id: 5,
@@ -200,7 +212,12 @@ const gameData = [
     category_id: 4,
     date: '1993-3-19',
   },
-
+  {
+    game_name: 'Bayou Billy',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
 
 
 
