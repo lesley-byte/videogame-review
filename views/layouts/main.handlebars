@@ -25,10 +25,10 @@
             </div>
         </nav>
     </header>
-    <nav class="bg-primary-subtle">
-        <a class="btn btn-primary" href="/">Home</a>
+    <nav class="bg-primary-subtle d-flex flex-row position-fixed">
         {{#if loggedIn}}
-        <button id="logout" class="btn-primary btn ">Logout</button>
+        <a class="btn btn-primary" href="/">Home</a>
+        <button id="logout" class="btn-primary btn">Logout</button>
         {{else}}
         <a class="btn btn-primary" href="/login">Login</a>
         {{/if}}
