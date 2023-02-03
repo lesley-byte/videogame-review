@@ -201,6 +201,36 @@ const gameData = [
     date: '1988-2-15',
   },
   {
+    game_name: 'MegaMan 3',
+    developer_id: 6,
+    category_id: 5,
+    date: '1990-3-12',
+  },
+  {
+    game_name: 'MegaMan 4',
+    developer_id: 6,
+    category_id: 5,
+    date: '1992-8-2',
+  },
+  {
+    game_name: 'MegaMan 5',
+    developer_id: 6,
+    category_id: 5,
+    date: '1993-3-19',
+  },
+  {
+    game_name: 'MegaMan 6',
+    developer_id: 6,
+    category_id: 5,
+    date: '1994-2-14',
+  },
+  {
+    game_name: 'Little Nemo The Dream Master',
+    developer_id: 6,
+    category_id: 5,
+    date: '1990-9-17',
+  },
+  {
     game_name: 'NHL Hockey 94',
     developer_id: 7,
     category_id: 4,
@@ -236,8 +266,6 @@ developer_id: 10,
 category_id: 5,
 date: '1994-6-22',
 },
-
-
 
 
 ];
