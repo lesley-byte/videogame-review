@@ -127,6 +127,24 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2004-11-9',
+    }, 
+  {
+    game_name: 'Lethal League Blaze',
+    developer_id: 2,
+    category_id: 1,
+    date: '2018-10-24',
+  },
+  {
+    game_name: 'Super Smash Bros. Ultimate',
+    developer_id: 2,
+    category_id: 1,
+    date: '2018-12-07',
+  },
+  {
+    game_name: 'Pokemon Ruby and Sapphire',
+    developer_id: 2,
+    category_id: 1,
+    date: '2002-11-21',
   },
   {
     game_name: 'Castlevania',
@@ -267,7 +285,7 @@ category_id: 5,
 date: '1994-6-22',
 },
 
-
+ main
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
