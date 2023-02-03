@@ -138,8 +138,22 @@ const gameData = [
     game_name: 'Metroid',
     developer_id: 9,
     category_id: 5,
-    date: '1987-9-17',
-  }
+    date: '1987-7-26',
+  },
+  {
+    game_name: 'Zelda',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-3-15',
+  },
+  {
+    game_name: 'Mike Tysons Punch-Out!!',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-8-9',
+  },
+
+
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
