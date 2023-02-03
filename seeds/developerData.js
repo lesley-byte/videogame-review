@@ -36,6 +36,30 @@ const developerData = [
         developer_name: 'Square Enix',
     },
     {
+        developer_name: 'The Pokemon Company International',
+    },
+    {
+        developer_name: 'Play VS',
+    },
+    {
+        developer_name: 'Mythical Games',
+    },
+    {
+        developer_name: 'Take Two Interactive Software',
+    },
+    {
+        developer_name: 'Private Division',
+    },
+    {
+        developer_name: 'Double Down Interactive',
+    },
+    {
+        developer_name: 'Jam City',
+    },
+    {
+        developer_name: 'Gearbox Software',
+    },
+    {
         developer_name: 'Ubisoft',
     },
     {
