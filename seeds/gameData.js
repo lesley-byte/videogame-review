@@ -176,6 +176,18 @@ const gameData = [
     category_id: 5,
     date: '1987-4-2',
   },
+  {
+    game_name: 'MegaMan',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-4-17',
+  },
+  {
+    game_name: 'MegaMan 2',
+    developer_id: 9,
+    category_id: 5,
+    date: '1988-2-15',
+  },
 
 
 
