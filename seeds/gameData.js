@@ -178,16 +178,30 @@ const gameData = [
   },
   {
     game_name: 'MegaMan',
-    developer_id: 9,
+    developer_id: 6,
     category_id: 5,
     date: '1987-4-17',
   },
   {
     game_name: 'MegaMan 2',
-    developer_id: 9,
+    developer_id: 6,
     category_id: 5,
     date: '1988-2-15',
   },
+  {
+    game_name: 'NHL Hockey 94',
+    developer_id: 7,
+    category_id: 4,
+    date: '1993-3-19',
+  },
+  {
+    game_name: 'NHL Hockey 95',
+    developer_id: 7,
+    category_id: 4,
+    date: '1993-3-19',
+  },
+
+
 
 
 
