@@ -4,7 +4,7 @@ const deleteReviewFormHandler = async (event) => {
   event.preventDefault();
   // get the values from the form
 
-  await fetch(`/reviews/${id}`, {
+  await fetch(`/api/reviews/${id}`, {
     method: 'DELETE',
   });
   document.location.replace('/');

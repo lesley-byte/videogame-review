@@ -45,21 +45,18 @@ router.get('/:id', withAuth, async (req, res) => {
       },
     });
     const games = gameData.map((game) => game.get({ plain: true }));
-    const categoryData = await Category.findByPk(req.params.id,
-      {
-        include: [
-          {
-            model: Genre,
-            attributes: ['genre_name'],
-          },
-        ],
-      }
-    ).catch((err) => {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [
+        {
+          model: Genre,
+          attributes: ['genre_name'],
+        },
+      ],
+    }).catch((err) => {
       res.json(err);
     });
     if (!categoryData) {
       res.status(404).json({ message: 'No category was found with this id!' });
-
     }
     const category = categoryData.get({ plain: true });
     res.status(200).render('category', {

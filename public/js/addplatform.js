@@ -5,7 +5,7 @@ const newPlatformHandler = async (event) => {
   const game_id = document.querySelector('#game_id').value;
   console.log('game_id: ', game_id);
   console.log('platform_id: ', platform_id);
-  await fetch(`./addplatform`, {
+  await fetch(`../api/games/addplatform`, {
     method: 'POST',
     body: JSON.stringify({
       game_id,
