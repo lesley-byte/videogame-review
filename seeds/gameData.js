@@ -127,6 +127,18 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2004-11-9',
+  },
+  {
+    game_name: 'Castlevania',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-9-17',
+  },
+  {
+    game_name: 'Metroid',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-9-17',
   }
 ];
 
