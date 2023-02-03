@@ -273,19 +273,35 @@ const gameData = [
     date: '1991-6-23',
   },
   {
-  game_name: 'Sonic the Hedgehog 2',
-  developer_id: 10,
-  category_id: 5,
-  date: '1993-2-5',
-},
-{
-game_name: 'Sonic the Hedgehog 3',
-developer_id: 10,
-category_id: 5,
-date: '1994-6-22',
-},
-
- main
+    game_name: 'Sonic the Hedgehog 2',
+    developer_id: 10,
+    category_id: 5,
+    date: '1993-2-5',
+  },
+  {
+    game_name: 'Sonic the Hedgehog 3',
+    developer_id: 10,
+    category_id: 5,
+    date: '1994-6-22',
+  },
+  {
+    game_name: 'Final Fantasy 7',
+    developer_id: 2,
+    category_id: 1,
+    date: '1997-1-31',
+  },
+  {
+    game_name: 'Crash Bandicoot',
+    developer_id: 2,
+    category_id: 1,
+    date: '1996-11-8',
+  },
+  {
+    game_name: 'Animal Crossing: New Horizons',
+    developer_id: 2,
+    category_id: 1,
+    date: '2020-03-20',
+  }
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
