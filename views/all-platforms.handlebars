@@ -2,7 +2,13 @@
     <h2 class="card-title">All Platforms</h2>
     <ul>
         {{#each platforms as |platform|}}
-        <li><a href="./platforms/{{platform.id}}"><span class="badge bg-info-subtle text-black fs-6 m-2 rounded-pill ">{{platform.platform_name}}</span></a></li>
+         <div class="d-inline-flex col" style="width: 25rem;">
+                <div class="d-inline-flex row" style="width: 20rem;">
+
+        <li><a href="./platforms/{{platform.id}}"><span class="badge bg-light text-black fs-5 m-2 rounded-pill ">{{platform.platform_name}}</span></a></li>
+       </div>
+       </div>
+       
         {{/each}}
 
 </section>

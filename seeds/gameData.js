@@ -189,10 +189,28 @@ const gameData = [
     date: '1989-5-9',
   },
   {
+    game_name: 'Ninja Gaiden 2',
+    developer_id: 22,
+    category_id: 5,
+    date: '1991-4-15',
+  },
+  {
+    game_name: 'Ninja Gaiden 3',
+    developer_id: 22,
+    category_id: 5,
+    date: '1992-2-9',
+  },
+  {
     game_name: 'Tecmo Bowl',
     developer_id: 22,
     category_id: 5,
     date: '1989-3-5',
+  },
+  {
+    game_name: 'Rygar',
+    developer_id: 22,
+    category_id: 5,
+    date: '1986-4-11',
   },
   {
     game_name: 'Contra',
@@ -319,7 +337,55 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2022-08-27',
-  }
+  },
+    game_name: 'Golden Axe',
+    developer_id: 10,
+    category_id: 5,
+    date: '1989-8-21',
+  },
+  {
+    game_name: 'Golden Axe 2',
+    developer_id: 10,
+    category_id: 5,
+    date: '1991-03-17',
+  },
+  {
+    game_name: 'Streets of Rage',
+    developer_id: 10,
+    category_id: 5,
+    date: '1990-04-6',
+  },
+  {
+    game_name: 'Streets of Rage 2',
+    developer_id: 10,
+    category_id: 5,
+    date: '1991-09-13',
+  },
+  {
+    game_name: 'Streets of Rage 3',
+    developer_id: 10,
+    category_id: 5,
+    date: '1993-05-15',
+  },
+  {
+    game_name: 'John Madden Football 97',
+    developer_id: 7,
+    category_id: 4,
+    date: '1996-3-13',
+  },
+  {
+    game_name: 'John Madden Football 98',
+    developer_id: 7,
+    category_id: 4,
+    date: '1997-2-9',
+  },
+  {
+    game_name: 'Street Fighter 2',
+    developer_id: 6,
+    category_id: 1,
+    date: '1991-2-7',
+  },
+
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);

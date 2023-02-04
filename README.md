@@ -1,7 +1,7 @@
 # Video Game Review
 
 ## Description
-This is a video game review website deployed to heroku. It is a full stack application that uses a MySQL database, Node, Express, and Handlebars. It follows the MVC design pattern; using Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
+This is a video game review website deployed to heroku. It is a full stack application that uses a MySQL database, Node, Express, Supertest, and Handlebars. It follows the MVC design pattern; using Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
 
 ## Table of Contents
 
@@ -15,15 +15,40 @@ This is a video game review website deployed to heroku. It is a full stack appli
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [Credits](#credits)
-- [Collaborators](#collaborators)
+- [Collaborators GitHub Profiles](#collaborators-github-profiles)
 
 ## Installation
-1) npm install
-2) npm run seed
-3) npm run start
+1. Clone the repo:
+``` bash
+git clone git@github.com:lesley-byte/videogame-review.git
+```
+2. Install NPM packages:
+``` bash
+npm install 
+```
+3. Create a .env file in the root directory and add the following:
+``` bash
+DB_NAME='game_db'
+DB_USER='yourMySQLusername'
+DB_PASSWORD='yourMySQLpassword'
+DB_SECRET='yourSecretCookiePassphrase'
+```
+4. Run the following command in the terminal to seed the database:
+``` bash
+ npm run seed
+```
+5. Run the following command in the terminal to start the application server:
+``` bash
+ npm start
+```
+6. Open your browser and navigate to:
+``` bash
+http://localhost:3001
+```
 
 
 ## Usage
+
     You can login to the database, the database will capture your name and read and look up video game reviews. You can add platforms and games. The user can submit to the homepage and see their reviews appear on the homepage.
 
     
@@ -36,11 +61,18 @@ This is a video game review website deployed to heroku. It is a full stack appli
 
 ## Screenshot
 
-![Screenshot](./Assets/Web%20capture_2-2-2023_184710_safe-eyrie-62856.herokuapp.com.jpeg)
+![Screenshot](./Assets/images/screenshot.jpeg)
 
 
 ## Testing
-You will use npm run test or node server.js. 
+Enter one of the following commands in to the terminal after the server is started:
+```bash
+ npm run test
+```
+ or 
+ ```bash
+ node server.js. 
+```
 
 ## License
 
@@ -62,9 +94,9 @@ If you have any questions about the repo, open an issue or contact us directly a
 
 We would like to thank the following people for their help:
 
+- Instructor - [Kevin Ferguson](https://github.com/kfergrocks)
+- TA's [Ringo](https://github.com/RingoKam), [Reese]() and [Juan]()
 - Tutors
-- Instructors
-- TA's
 - Classmates
 
 ## Collaborators GitHub Profiles:
@@ -72,6 +104,6 @@ We would like to thank the following people for their help:
 You can find more of our work at the following links:
 
 - [Phadeline](https://github.com/phadeline)
-- [Ryan](https://github.com/ryancarless96)
 - [Joey](https://github.com/joeyblue27)
+- [Ryan](https://github.com/ryancarless96)
 - [Lesley](https://github.com/lesley-byte)
