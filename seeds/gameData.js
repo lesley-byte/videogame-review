@@ -338,6 +338,7 @@ const gameData = [
     category_id: 1,
     date: '2022-08-27',
   },
+  {
     game_name: 'Golden Axe',
     developer_id: 10,
     category_id: 5,
