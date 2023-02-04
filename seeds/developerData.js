@@ -68,6 +68,15 @@ const developerData = [
     {
         developer_name: 'Tecmo',
     },
+    {
+        developer_name: 'Naughty Dog',
+    },
+    {
+        developer_name: 'Insomniac Games'
+    },
+    {
+        developer_name: '343 Industries'
+    }
 ];
 
 const seedDeveloper = () => Developer.bulkCreate(developerData);
