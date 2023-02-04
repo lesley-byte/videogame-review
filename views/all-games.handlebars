@@ -4,12 +4,16 @@
     <h3>Choose a Game to add a review!</h3>
     <ul>
       {{! will show the games }}
+       <div class="card-container col-sm-6 mb-3 mb-sm-0 d-inline-flex flex-wrap" style="width: 90%">
+
       {{#each games as |game|}}
-        <li class="fs-5">Game name: <a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
-        <li class"fs-6">In category:
-          <a href='./categories/{{game.category.id}}'><span class="badge bg-light text-black fs-6 m-2 rounded-pill ">{{game.category.category_name}}</span></a></li>
+       <div class="card m-2 border border-primary" style="width: 18rem;">
+        <li class="card-header bg-primary-subtle fs-4"><a href='./games/{{game.id}}'>{{game.game_name}}</a></li>
+        <li class="card-body d-flex align-items-center" >In: <a href='./categories/{{game.category.id}}'><span class="badge bg-primary-subtle text-primary fs-6 m-2 rounded-pill ">{{game.category.category_name}}</span></a></li>
         <br />
+        </div>
       {{/each}}
+      </div>
     </ul>
   </div>
   <div class='col'>
