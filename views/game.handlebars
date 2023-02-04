@@ -20,6 +20,7 @@
     <input id='game_id' value='{{game.id}}' hidden></input>
     </br>
     <select id='new-platform'>
+
     {{#each platforms as |platform|}}
         <option value='{{platform.id}}'>{{platform.platform_name}}</option>
     {{/each}}
@@ -34,7 +35,7 @@
 
     <ul>
     {{#each reviews as |review|}}
-    {{log review}}
+
         <li>Review title: <a href='../reviews/{{review.id}}'>{{review.review_title}}</a></li>
     {{/each}}
     </ul>

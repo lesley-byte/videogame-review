@@ -11,6 +11,7 @@ const {
   GamePlatform,
 } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op } = require('sequelize');
 
 // get all games and also get all developers and categories
 router.get('/', withAuth, async (req, res) => {
@@ -49,28 +50,6 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//     const newGame = await Game.create({
-//       game_name: req.body.game_name,
-//       developer_id: req.body.developer_id,
-//       category_id: req.body.category_id,
-//       date: req.body.date,
-//     }).catch((err) => {
-//       res.json(err);
-//       return;
-//     });
-//     if (!newGame) {
-//       res.status(404).json({ message: 'Cannot create new game' });
-//       return;
-//     }
-//     res.status(200).json(newGame);
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//     return;
-//   }
-// });
 
 // get one game and show all possible platforms 
 router.get('/:id', withAuth, async (req, res) => {
@@ -109,6 +88,12 @@ router.get('/:id', withAuth, async (req, res) => {
           {
             model: Platform,
             attributes: ['platform_name'],
+            // exclude platforms that are already in gamePlatforms.platform_id
+          //   where: {
+          //     id: {
+          //       [Op.notIn]:gamePlatformData.map((gamePlatform) => gamePlatform.platform_id),
+          //       },
+          // },
           },
           {
             model: Game,
@@ -118,21 +103,30 @@ router.get('/:id', withAuth, async (req, res) => {
       // {include: [{ model: User }, { model: Category }],}
     ).catch((err) => {
       res.json(err);
+      console.log(err)
       return;
     });
     if (!gamePlatformData) {
       res.status(404).json({ message: 'no game found with this id!' });
     }
     const gamePlatforms = gamePlatformData.map((gamePlatform) =>
-      gamePlatform.get({ plain: true })
+    gamePlatform.get({ plain: true })
     );
     const game = gameData.get({ plain: true });
-
+    // exclude platforms that are already in gamePlatforms.platform_id
     const platformData = await Platform.findAll({
-    });
-    const platforms = platformData.map((platform) =>
+      where: {
+        id: {
+            [Op.notIn]:gamePlatformData.map((gamePlatform) => gamePlatform.platform_id),
+            },
+        },
+      });
+      
+      const platforms = platformData.map((platform) =>
       platform.get({ plain: true })
       );
+      console.log(platformData.map((platform) => platform.id));
+      console.log(gamePlatformData.map((gamePlatform) => gamePlatform.platform_id));
     res.render('game', {
       game,
       gamePlatforms,
