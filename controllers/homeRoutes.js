@@ -35,5 +35,24 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// About route
+router.get('/about', (req, res) => {
+  res.render('about');
+});
+
+// Contact route
+router.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+// Privacy route
+router.get('/privacy', (req, res) => {
+  res.render('privacy');
+});
+
+// Cookie route
+router.get('/cookie', (req, res) => {
+  res.render('cookie');
+});
 
 module.exports = router;
