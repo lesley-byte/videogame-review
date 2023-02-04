@@ -378,14 +378,32 @@ const gameData = [
     game_name: 'John Madden Football 98',
     developer_id: 7,
     category_id: 4,
-    date: '1997-2-9',
+    date: '1997-02-9',
   },
   {
     game_name: 'Street Fighter 2',
     developer_id: 6,
     category_id: 1,
-    date: '1991-2-7',
+    date: '1991-02-7',
   },
+  {
+    game_name: 'Sonic Heroes',
+    developer_id: 6,
+    category_id: 1,
+    date: '2003-12-30',
+  },
+  {
+    game_name: 'Overwatch',
+    developer_id: 6,
+    category_id: 1,
+    date: '2016-05-24',
+  },
+  {
+    game_name: 'Jet Set Radio',
+    developer_id: 6,
+    category_id: 1,
+    date: '2000-06-29',
+  }
 
 ];
 
