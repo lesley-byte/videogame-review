@@ -301,6 +301,24 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2020-03-20',
+  },
+  {
+    game_name: 'Uncharted 4',
+    developer_id: 2,
+    category_id: 1,
+    date: '2016-05-10',
+  },
+  {
+    game_name: 'Street Fighter 3:3rd Strike',
+    developer_id: 2,
+    category_id: 1,
+    date: '1999-05-12',
+  },
+  {
+    game_name: 'Splatoon 3',
+    developer_id: 2,
+    category_id: 1,
+    date: '2022-08-27',
   }
 ];
 
