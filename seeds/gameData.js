@@ -189,10 +189,28 @@ const gameData = [
     date: '1989-5-9',
   },
   {
+    game_name: 'Ninja Gaiden 2',
+    developer_id: 22,
+    category_id: 5,
+    date: '1991-4-15',
+  },
+  {
+    game_name: 'Ninja Gaiden 3',
+    developer_id: 22,
+    category_id: 5,
+    date: '1992-2-9',
+  },
+  {
     game_name: 'Tecmo Bowl',
     developer_id: 22,
     category_id: 5,
     date: '1989-3-5',
+  },
+  {
+    game_name: 'Rygar',
+    developer_id: 22,
+    category_id: 5,
+    date: '1986-4-11',
   },
   {
     game_name: 'Contra',
@@ -301,7 +319,8 @@ const gameData = [
     developer_id: 2,
     category_id: 1,
     date: '2020-03-20',
-  }
+  },
+
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
