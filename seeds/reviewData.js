@@ -254,6 +254,23 @@ const reviewData = [
     game_id: 28,
     review_date: '2021-01-01',
   },
+  {
+    review_rating: 5,
+    review_title: 'Exciting!',
+    review_text:
+      'Trust me when I say that the developers outdid themselves with this game.',
+    user_id: 4,
+    game_id: 29,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 4,
+    review_title: 'good gameplay.',
+    review_text: 'Gameplay was fun and and graphics were captivating',
+    user_id: 2,
+    game_id: 30,
+    review_date: '2021-01-01',
+  },
 ];
 
 const seedReviews = () => Review.bulkCreate(reviewData);
