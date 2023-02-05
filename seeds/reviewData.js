@@ -206,6 +206,38 @@ const reviewData = [
     game_id: 22,
     review_date: '2021-01-01',
   },
+  {
+    review_rating: 2,
+    review_title: 'snooze fest',
+    review_text: 'Almost fell asleep playing this',
+    user_id: 2,
+    game_id: 23,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 4,
+    review_title: 'EXCELLENT',
+    review_text: 'absolute perfection',
+    user_id: 2,
+    game_id: 24,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 3,
+    review_title: 'Bang average',
+    review_text: 'This game is totally unoriginal',
+    user_id: 4,
+    game_id: 25,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 5,
+    review_title: 'I wish I could give it 10 stars!',
+    review_text: 'This is one of those games that will stand the test of time',
+    user_id: 1,
+    game_id: 26,
+    review_date: '2021-01-01',
+  },
 ];
 
 const seedReviews = () => Review.bulkCreate(reviewData);
