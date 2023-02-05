@@ -124,6 +124,38 @@ const reviewData = [
     game_id: 13,
     review_date: '2021-01-01',
   },
+  {
+    review_rating: 5,
+    review_title: 'FIVE STARS!!!!',
+    review_text: 'The developers really outdid themvelves with this game. ',
+    user_id: 1,
+    game_id: 14,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 5,
+    review_title: 'I am addicted to this game',
+    review_text: 'You will not regret buying this game.',
+    user_id: 2,
+    game_id: 15,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 4,
+    review_title: 'Just Fantastic',
+    review_text: 'The graphics and gameplay were simply outstanding',
+    user_id: 3,
+    game_id: 15,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 3,
+    review_title: 'Gameplay was too short',
+    review_text: 'I wanted the gameplay to be longer',
+    user_id: 4,
+    game_id: 16,
+    review_date: '2021-01-01',
+  },
 ];
 
 const seedReviews = () => Review.bulkCreate(reviewData);
