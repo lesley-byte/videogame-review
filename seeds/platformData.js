@@ -53,6 +53,15 @@ const platformData = [
     {
         platform_name: 'Atari 2600',
     },
+    {
+        platform_name: 'Nintendo DS',
+    },
+    {
+        platform_name: 'Playstation Portable',
+    },
+    {
+        platform_name: 'Gameboy Advance',
+    }
 ];
 
 const seedPlatforms = () => Platform.bulkCreate(platformData);
