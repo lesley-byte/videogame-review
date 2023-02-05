@@ -92,6 +92,38 @@ const reviewData = [
     game_id: 9,
     review_date: '2021-01-01',
   },
+  {
+    review_rating: 3,
+    review_title: 'MEH',
+    review_text: 'They could have done so much better with this game!',
+    user_id: 2,
+    game_id: 10,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 5,
+    review_title: 'Blown Away!',
+    review_text: 'The graphics alone are out of this world!',
+    user_id: 4,
+    game_id: 11,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 2,
+    review_title: 'Crying, because it so bad',
+    review_text: 'The game developers did not even try to make this good.',
+    user_id: 3,
+    game_id: 12,
+    review_date: '2021-01-01',
+  },
+  {
+    review_rating: 1,
+    review_title: 'Why is this even a game?',
+    review_text: 'There goes 20 dollars that I will never get back :(',
+    user_id: 4,
+    game_id: 13,
+    review_date: '2021-01-01',
+  },
 ];
 
 const seedReviews = () => Review.bulkCreate(reviewData);
