@@ -15,6 +15,18 @@ const userData = [
     password: '$2b$10$W4B8iZ1RyqVRzQRqgmaAd.2S6mqFSdYFNfuGIpjGwRVC6vWC7rlZG',
     // userblock_id: [2, 3]
   },
+  {
+    username: 'phay',
+    email: 'phay@phay.com',
+    password: 'abcdefg',
+    // userblock_id: [2, 3]
+  },
+  {
+    username: 'test',
+    email: 'test@test.com',
+    password: 'testtest',
+    // userblock_id: [2, 3]
+  },
 ];
 //
 const seedUsers = () => User.bulkCreate(userData);
