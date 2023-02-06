@@ -421,7 +421,32 @@ const gameData = [
     developer_id: 6,
     category_id: 1,
     date: '2000-06-29',
-  }
+  },
+  {
+    game_name: 'Rayman',
+    developer_id: 20,
+    category_id: 5,
+    date: '1995-3-21',
+  },
+  {
+    game_name: 'Rayman 2: The Great Escape',
+    developer_id: 20,
+    category_id: 5,
+    date: '1999-2-4',
+  },
+  {
+    game_name: 'Rayman 3: Hoodlum Havoc',
+    developer_id: 20,
+    category_id: 5,
+    date: '2003-9-3',
+  },
+  {
+    game_name: 'Rayman Origins',
+    developer_id: 20,
+    category_id: 5,
+    date: '2011-5-20',
+  },
+  
 
 ];
 
