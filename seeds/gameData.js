@@ -189,10 +189,22 @@ const gameData = [
     date: '1989-4-7',
   },
   {
+    game_name: 'Dr. Mario',
+    developer_id: 9,
+    category_id: 11,
+    date: '1990-4-7',
+  },
+  {
     game_name: 'Zelda',
     developer_id: 9,
     category_id: 5,
     date: '1987-3-15',
+  },
+  {
+    game_name: 'Zelda 2',
+    developer_id: 9,
+    category_id: 5,
+    date: '1989-3-15',
   },
   {
     game_name: 'Mike Tysons Punch-Out!!',
@@ -225,6 +237,12 @@ const gameData = [
     date: '1989-3-5',
   },
   {
+    game_name: 'Adventures of Bayou Billy',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
     game_name: 'Rygar',
     developer_id: 22,
     category_id: 5,
@@ -239,6 +257,12 @@ const gameData = [
   {
     game_name: 'LifeForce',
     developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
+    game_name: 'Kirbys Adventure',
+    developer_id: 6,
     category_id: 5,
     date: '1987-4-2',
   },
@@ -295,12 +319,6 @@ const gameData = [
     developer_id: 7,
     category_id: 4,
     date: '1993-3-19',
-  },
-  {
-    game_name: 'Bayou Billy',
-    developer_id: 8,
-    category_id: 5,
-    date: '1987-4-2',
   },
   {
     game_name: 'Sonic the Hedgehog',
@@ -463,6 +481,24 @@ const gameData = [
     developer_id: 26,
     category_id: 2,
     date: '1997-2-9',
+  },
+  {
+    game_name: 'Fifa Soccer 2002',
+    developer_id: 7,
+    category_id: 4,
+    date: '2001-3-14',
+  },
+  {
+    game_name: 'Fifa Soccer 2003',
+    developer_id: 7,
+    category_id: 4,
+    date: '2002-8-12',
+  },
+  {
+    game_name: 'NBA 2k Live',
+    developer_id: 7,
+    category_id: 4,
+    date: '2001-7-4',
   },
   
 
