@@ -171,6 +171,24 @@ const gameData = [
     date: '1987-7-26',
   },
   {
+    game_name: 'Super Mario Bros',
+    developer_id: 9,
+    category_id: 5,
+    date: '1985-5-12',
+  },
+  {
+    game_name: 'Super Mario Bros 2',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-2-10',
+  },
+  {
+    game_name: 'Super Mario Bros 3',
+    developer_id: 9,
+    category_id: 5,
+    date: '1989-4-7',
+  },
+  {
     game_name: 'Zelda',
     developer_id: 9,
     category_id: 5,
