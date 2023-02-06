@@ -8,7 +8,7 @@ const categoryData = [
         genre_id: 1,
     },
     {
-        category_name: 'Fighgting & Martial Arts',
+        category_name: 'Fighting & Martial Arts',
         genre_id: 1,
     },
     {
