@@ -262,7 +262,7 @@ const gameData = [
   },
   {
     game_name: 'Kirbys Adventure',
-    developer_id: 6,
+    developer_id: 9,
     category_id: 5,
     date: '1987-4-2',
   },
@@ -475,6 +475,18 @@ const gameData = [
     developer_id: 26,
     category_id: 2,
     date: '1994-5-20',
+  },
+  {
+    game_name: 'Fatal Fury',
+    developer_id: 26,
+    category_id: 2,
+    date: '1991-6-3',
+  },
+  {
+    game_name: 'Fatal Fury 2',
+    developer_id: 26,
+    category_id: 2,
+    date: '1994-3-15',
   },
   {
     game_name: 'King of Fighters 97',
