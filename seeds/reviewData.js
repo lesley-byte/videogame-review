@@ -70,7 +70,7 @@ const reviewData = [
     review_rating: 3,
     review_title: 'not bad but not great!',
     review_text:
-      'I expeected better but at the same time I was not disappointed',
+      'I expected better but at the same time I was not disappointed',
     user_id: 2,
     game_id: 7,
     review_date: '2021-01-01',
