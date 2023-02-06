@@ -171,10 +171,40 @@ const gameData = [
     date: '1987-7-26',
   },
   {
+    game_name: 'Super Mario Bros',
+    developer_id: 9,
+    category_id: 5,
+    date: '1985-5-12',
+  },
+  {
+    game_name: 'Super Mario Bros 2',
+    developer_id: 9,
+    category_id: 5,
+    date: '1987-2-10',
+  },
+  {
+    game_name: 'Super Mario Bros 3',
+    developer_id: 9,
+    category_id: 5,
+    date: '1989-4-7',
+  },
+  {
+    game_name: 'Dr. Mario',
+    developer_id: 9,
+    category_id: 11,
+    date: '1990-4-7',
+  },
+  {
     game_name: 'Zelda',
     developer_id: 9,
     category_id: 5,
     date: '1987-3-15',
+  },
+  {
+    game_name: 'Zelda 2',
+    developer_id: 9,
+    category_id: 5,
+    date: '1989-3-15',
   },
   {
     game_name: 'Mike Tysons Punch-Out!!',
@@ -207,6 +237,12 @@ const gameData = [
     date: '1989-3-5',
   },
   {
+    game_name: 'Adventures of Bayou Billy',
+    developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
     game_name: 'Rygar',
     developer_id: 22,
     category_id: 5,
@@ -221,6 +257,12 @@ const gameData = [
   {
     game_name: 'LifeForce',
     developer_id: 8,
+    category_id: 5,
+    date: '1987-4-2',
+  },
+  {
+    game_name: 'Kirbys Adventure',
+    developer_id: 9,
     category_id: 5,
     date: '1987-4-2',
   },
@@ -277,12 +319,6 @@ const gameData = [
     developer_id: 7,
     category_id: 4,
     date: '1993-3-19',
-  },
-  {
-    game_name: 'Bayou Billy',
-    developer_id: 8,
-    category_id: 5,
-    date: '1987-4-2',
   },
   {
     game_name: 'Sonic the Hedgehog',
@@ -388,22 +424,95 @@ const gameData = [
   },
   {
     game_name: 'Sonic Heroes',
-    developer_id: 6,
-    category_id: 1,
+    developer_id: 10,
+    category_id: 5,
     date: '2003-12-30',
   },
   {
     game_name: 'Overwatch',
-    developer_id: 6,
+    developer_id: 5,
     category_id: 1,
     date: '2016-05-24',
   },
   {
     game_name: 'Jet Set Radio',
-    developer_id: 6,
+    developer_id: 10,
     category_id: 1,
     date: '2000-06-29',
-  }
+  },
+  {
+    game_name: 'Rayman',
+    developer_id: 20,
+    category_id: 5,
+    date: '1995-3-21',
+  },
+  {
+    game_name: 'Rayman 2: The Great Escape',
+    developer_id: 20,
+    category_id: 5,
+    date: '1999-2-4',
+  },
+  {
+    game_name: 'Rayman 3: Hoodlum Havoc',
+    developer_id: 20,
+    category_id: 5,
+    date: '2003-9-3',
+  },
+  {
+    game_name: 'Rayman Origins',
+    developer_id: 20,
+    category_id: 5,
+    date: '2011-5-20',
+  },
+  {
+    game_name: 'Art og Fighting',
+    developer_id: 26,
+    category_id: 2,
+    date: '1992-5-20',
+  },
+  {
+    game_name: 'Art og Fighting 2',
+    developer_id: 26,
+    category_id: 2,
+    date: '1994-5-20',
+  },
+  {
+    game_name: 'Fatal Fury',
+    developer_id: 26,
+    category_id: 2,
+    date: '1991-6-3',
+  },
+  {
+    game_name: 'Fatal Fury 2',
+    developer_id: 26,
+    category_id: 2,
+    date: '1994-3-15',
+  },
+  {
+    game_name: 'King of Fighters 97',
+    developer_id: 26,
+    category_id: 2,
+    date: '1997-2-9',
+  },
+  {
+    game_name: 'Fifa Soccer 2002',
+    developer_id: 7,
+    category_id: 4,
+    date: '2001-3-14',
+  },
+  {
+    game_name: 'Fifa Soccer 2003',
+    developer_id: 7,
+    category_id: 4,
+    date: '2002-8-12',
+  },
+  {
+    game_name: 'NBA 2k Live',
+    developer_id: 7,
+    category_id: 4,
+    date: '2001-7-4',
+  },
+  
 
 ];
 
