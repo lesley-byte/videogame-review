@@ -406,19 +406,19 @@ const gameData = [
   },
   {
     game_name: 'Sonic Heroes',
-    developer_id: 6,
-    category_id: 1,
+    developer_id: 10,
+    category_id: 5,
     date: '2003-12-30',
   },
   {
     game_name: 'Overwatch',
-    developer_id: 6,
+    developer_id: 5,
     category_id: 1,
     date: '2016-05-24',
   },
   {
     game_name: 'Jet Set Radio',
-    developer_id: 6,
+    developer_id: 10,
     category_id: 1,
     date: '2000-06-29',
   },
@@ -445,6 +445,24 @@ const gameData = [
     developer_id: 20,
     category_id: 5,
     date: '2011-5-20',
+  },
+  {
+    game_name: 'Art og Fighting',
+    developer_id: 26,
+    category_id: 2,
+    date: '1992-5-20',
+  },
+  {
+    game_name: 'Art og Fighting 2',
+    developer_id: 26,
+    category_id: 2,
+    date: '1994-5-20',
+  },
+  {
+    game_name: 'King of Fighters 97',
+    developer_id: 26,
+    category_id: 2,
+    date: '1997-2-9',
   },
   
 

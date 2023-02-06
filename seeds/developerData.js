@@ -76,7 +76,11 @@ const developerData = [
     },
     {
         developer_name: '343 Industries'
-    }
+    },
+    {
+        developer_name: 'SNK'
+    },
+
 ];
 
 const seedDeveloper = () => Developer.bulkCreate(developerData);
